@@ -4,7 +4,11 @@ const
     gulp = require('gulp'),
     postcss = require('gulp-postcss'),
     sass = require('gulp-sass'),
-    babel = require('gulp-babel');
+    babel = require('gulp-babel'),
+    uglify = require('gulp-uglify'),
+    plumber = require('gulp-plumber'),
+    replace = require('gulp-replace'),
+    fs = require('fs');
 
 
 // SCSS
@@ -21,34 +25,48 @@ gulp.task('sass', function () {
         require("css-mqpacker")({sort: true})
     ];
 
-    return gulp.src('./src/css/*.scss')
-        .pipe( sass({outputStyle: 'expanded'}).on('error', sass.logError) )
-        .pipe(postcss(plugins))
+    return gulp.src('./src/css/style.scss')
+        .pipe(plumber())
+        .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+        .pipe(postcss(plugins))        
         .pipe( gulp.dest('./dist/css') );
 });
 
-// gulp.task('scripts', function () {
-//     return gulp.src('./src/js/script.js')
-//         // .pipe( babel() )
-//         .pipe(babel({
-//             "presets": ["es2015"]
-//         }))
-//         .pipe( gulp.dest('./dist/js') );
-// });
-
-
-
 gulp.task('scripts', function() {
     return gulp.src('./src/js/*.js')
+        .pipe(plumber())
         .pipe(babel())
+        .pipe(uglify({
+            mangle: false,
+            compress: false,
+            output: { beautify: true }
+           }))
         .pipe( gulp.dest('./dist/js') );
     });
 
+
+gulp.task('inject', function() {
+    gulp.src('./*.html')
+    .pipe(replace(/<link href="style.css"[^>]*>/, function(s) {
+        var style = fs.readFileSync('./dist/css/style.css', 'utf8');
+        return '<style>\n' + style + '\n</style>';
+    }))
+    .pipe(replace(/<script src="script.js"[^>]*>/, function(s) {
+        var script = fs.readFileSync('./dist/js/script.js');
+        return '<script>\n' + script + '\n</script>';
+    }))
+    .pipe(gulp.dest('./dist/html'));
+    });
+    
 
 // Watch/Default Tasks
 gulp.task('watch', function () {
     gulp.watch('./src/js/*.js', ['scripts']);
     gulp.watch('./src/css/**/*.scss', ['sass']);
+
+    gulp.watch('./dist/js/*.js', ['inject']);
+    gulp.watch('./dist/css/*.css', ['inject']);
+
 });
 
-gulp.task('default', ['watch', 'sass', 'scripts']);
+gulp.task('default', ['watch', 'sass', 'scripts', 'inject']);
