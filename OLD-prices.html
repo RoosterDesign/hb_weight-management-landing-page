@@ -1,1251 +1,1251 @@
 <style>
-    @charset "UTF-8";
-    .wmc-c:after {
-      visibility: hidden;
-      display: block;
-      font-size: 0;
-      content: " ";
-      clear: both;
-      height: 0;
-    }
-    
-    .wmc-c {
-      display: inline-block;
-    }
-    
-    * html .wmc-c {
-      height: 1%;
-    }
-    
-    .wmc-c {
-      display: block;
-    }
-    
-    #wmc-wrapper {
-      margin-top: -10px;
-    }
-    
-    @-webkit-keyframes fadeInUp {
-      from {
-        opacity: 0;
-        -webkit-transform: translateY(50px);
-        transform: translateY(50px);
-      }
-      to {
-        opacity: 1;
-        -webkit-transform: translateY(0px);
-        transform: translateY(0px);
-      }
-    }
-    
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        -webkit-transform: translateY(50px);
-        transform: translateY(50px);
-      }
-      to {
-        opacity: 1;
-        -webkit-transform: translateY(0px);
-        transform: translateY(0px);
-      }
-    }
-    
-    .fadeInUp {
-      -webkit-animation: fadeInUp 1s 1s forwards;
-      animation: fadeInUp 1s 1s forwards;
+  @charset "UTF-8";
+  .wmc-c:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+  
+  .wmc-c {
+    display: inline-block;
+  }
+  
+  * html .wmc-c {
+    height: 1%;
+  }
+  
+  .wmc-c {
+    display: block;
+  }
+  
+  #wmc-wrapper {
+    margin-top: -10px;
+  }
+  
+  @-webkit-keyframes fadeInUp {
+    from {
       opacity: 0;
+      -webkit-transform: translateY(50px);
+      transform: translateY(50px);
     }
-    
+    to {
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+      transform: translateY(0px);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      -webkit-transform: translateY(50px);
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+      transform: translateY(0px);
+    }
+  }
+  
+  .fadeInUp {
+    -webkit-animation: fadeInUp 1s 1s forwards;
+    animation: fadeInUp 1s 1s forwards;
+    opacity: 0;
+  }
+  
+  .wmc-title {
+    color: #8e98c9;
+    font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin: 0 0 20px;
+    text-align: center;
+  }
+  
+  .wmc-title--white {
+    color: #fff;
+  }
+  
+  .wmc-section {
+    background-color: #f7f7f7;
+    padding: 40px 20px;
+  }
+  
+  .wmc-section--has-img {
+    background-color: #7c81a9;
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+    background-size: 100% auto;
+    position: relative;
+  }
+  
+  .wmc-section--has-img:before {
+    background: #484f75;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: .6;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  
+  .wmc-section__inner {
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .wmc-section--intro {
+    background-image: url("/__ssobj/static/wmc-intro-bg-mob_5.jpg");
+  }
+  
+  .wmc-section--intro .wmc-section__inner {
+    max-width: 1060px;
+  }
+  
+  .wmc-tip {
+    border-bottom: 1px solid #8e98c9;
+    padding: 45px 0;
+    position: relative;
+    text-align: center;
+  }
+  
+  .wmc-tip:nth-child(1) {
+    border-top: 1px solid #8e98c9;
+    display: block;
+  }
+  
+  .wmc-tip:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  
+  .wmc-tip__icon-wrap {
+    background: #8e98c9;
+    -webkit-box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    display: block;
+    height: 50px;
+    margin: 0 auto 20px;
+    min-width: 50px;
+    text-align: center;
+    width: 50px;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    margin-left: -25px;
+  }
+  
+  .wmc-tip__icon {
+    color: #fff;
+    font-size: 26px;
+    position: relative;
+    top: 12px;
+  }
+  
+  .wmc-tip__icon.fa-heartbeat {
+    top: 12px;
+  }
+  
+  .wmc-tip__body {
+    color: #fff;
+    font-size: 16px;
+    line-height: 26px;
+    margin: 0;
+  }
+  
+  .wmc-bio {
+    margin: 30px 0 50px;
+    padding: 0;
+    position: relative;
+    text-align: center;
+  }
+  
+  .wmc-bio__photo {
+    border-radius: 50%;
+    border: 4px solid #8e98c9;
+    display: block;
+    height: 170px;
+    margin: 0 auto 20px;
+    width: 170px;
+  }
+  
+  .wmc-bio__quote {
+    color: #fff;
+    font-family: Georgia, Sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.5;
+    margin: 0;
+    position: relative;
+    quotes: "“";
+  }
+  
+  .wmc-bio__quote:before {
+    color: #fff;
+    content: open-quote;
+    display: inline-block;
+    font-size: 120px;
+    height: 0;
+    line-height: 1;
+    left: -5px;
+    opacity: .4;
+    position: absolute;
+    top: -25px;
+  }
+  
+  .wmc-bio__cite {
+    color: #fff;
+    font-size: 14px;
+    margin: 15px 0 0;
+  }
+  
+  .wmc-section--products {
+    background-image: url("/__ssobj/static/wmc-products-bg-mob_5.jpg");
+  }
+  
+  .wmc-products-wrap {
+    -webkit-box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    max-width: 820px;
+  }
+  
+  .wmc-products {
+    display: none;
+  }
+  
+  .wmc-products--active {
+    display: block;
+  }
+  
+  .product-list-tabs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 0;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .product-list-tabs__control {
+    background: #e2e2e2;
+    border-radius: 5px 5px 0 0;
+    color: #696969;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 1.3;
+    max-width: 350px;
+    padding: 20px 10px 17px;
+    text-align: center;
+    width: 45%;
+  }
+  
+  .product-list-tabs__control--active {
+    background: #f7f4f4;
+  }
+  
+  .product-list-tabs__control-icon {
+    display: none !important;
+  }
+  
+  .wmc-product {
+    background: #fff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f7f4f4), to(#ffffff));
+    background: linear-gradient(to bottom, #f7f4f4 0%, #ffffff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f4f4', endColorstr='#ffffff',GradientType=0 );
+    border-bottom: 1px solid #eaeaea;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .wmc-product__promo-banner {
+    background: #ED028B;
+    color: #fff;
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 10px;
+    padding: 7px 20px;
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+  }
+  
+  .wmc-product__img {
+    height: auto;
+    left: 20px;
+    max-width: 100px;
+    position: absolute;
+    top: 20px;
+    width: 100%;
+  }
+  
+  .wmc-product__side {
+    min-height: 110px;
+    padding-left: 120px;
+  }
+  
+  .wmc-product__title {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 10px;
+    padding-top: 5px;
+  }
+  
+  .wmc-product__title-link {
+    color: #0a623f;
+    text-decoration: none;
+  }
+  
+  .wmc-product__title-link:hover {
+    text-decoration: underline;
+  }
+  
+  .wmc-product__desc {
+    color: #565656;
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  .wmc-product__meta {
+    margin-bottom: 10px;
+  }
+  
+  .wmc-product__star-ratings, .wmc-product__rating {
+    background-image: url("https://www.hollandandbarrett.com/__ssobj/static/ratings-stars-18px.png");
+    background-repeat: repeat-x;
+    display: block;
+    height: 18px;
+  }
+  
+  .wmc-product__star-ratings {
+    background-position: left top;
+    float: left;
+    margin-bottom: 10px;
+    position: relative;
+    width: 98px;
+  }
+  
+  .wmc-product__rating {
+    background-position: left -18px;
+    height: 18px;
+    display: block;
+    content: '';
+    width: 50px;
+    max-width: 98px;
+  }
+  
+  .wmc-product__price {
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .wmc-product__cta {
+    background: #106847;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    height: 38px;
+    margin-top: 20px;
+    outline: none;
+    position: relative;
+    width: 100%;
+  }
+  
+  .wmc-product__cta:hover {
+    background: #2a5f51;
+  }
+  
+  .wmc-product__cta:active {
+    background: #4d8071;
+    bottom: -1px;
+    right: -1px;
+  }
+  
+  .wmc-product:first-child {
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .wmc-product:last-child {
+    border-radius: 0 0 5px 5px;
+  }
+  
+  .wmc-product:nth-child(even) .wmc-product__side {
+    padding-left: 0;
+    padding-right: 120px;
+  }
+  
+  .wmc-product:nth-child(even) .wmc-product__img {
+    left: auto;
+    right: 20px;
+  }
+  
+  @-webkit-keyframes quick-order-loading {
+    0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes quick-order-loading {
+    0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+  .wmc-product__cta.in-progress:before,
+  .wmc-product-carousel-item__cta.quickAdd.in-progress:before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-left-color: #fff;
+    -webkit-animation: quick-order-loading 1500ms infinite linear;
+    animation: quick-order-loading 1500ms infinite linear;
+  }
+  
+  .slick-arrow,
+  .slick-arrow:active,
+  .slick-arrow:hover {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #ffffff82;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+  }
+  
+  .slick-prev,
+  .slick-prev:active {
+    left: -2%;
+  }
+  
+  .slick-next,
+  .slick-next:active {
+    right: -2%;
+  }
+  
+  .slick-prev:before {
+    left: 12px;
+  }
+  
+  .slick-next:before {
+    right: 12px;
+  }
+  
+  .wmc-advice-carousel .slick-arrow,
+  .wmc-product-carousel .slick-arrow {
+    top: 30%;
+  }
+  
+  .wmc-advice-carousel,
+  .wmc-product-carousel {
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .wmc-advice-carousel .slick-slide,
+  .wmc-product-carousel .slick-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+    -webkit-transition: opacity .2s ease;
+    transition: opacity .2s ease;
+  }
+  
+  .wmc-advice-carousel .slick-slide:focus,
+  .wmc-product-carousel .slick-slide:focus {
+    outline: none;
+  }
+  
+  .wmc-product-carousel .slick-slide {
+    background: #fff;
+    border-radius: 5px;
+    opacity: .4;
+    padding: 20px;
+    width: 200px;
+  }
+  
+  .wmc-product-carousel .slick-slide.slick-active {
+    opacity: 1;
+  }
+  
+  .wmc-advice-carousel .slick-slide {
+    width: 400px;
+  }
+  
+  .wmc-advice-carousel .slick-slide .wmc-advice-carousel-item__link,
+  .wmc-product-carousel .slick-slide .wmc-product-carousel-item__link {
+    color: #3f796a;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  
+  .wmc-advice-carousel .slick-slide .wmc-advice-carousel-item__promo-banner,
+  .wmc-product-carousel .slick-slide .wmc-product-carousel-item__promo-banner {
+    position: absolute;
+    background: #ED028B;
+    bottom: 165px;
+    width: 90%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 5px 0;
+    color: #fff;
+    border-radius: 2px;
+  }
+  
+  .wmc-advice-carousel .slick-slide .wmc-advice-carousel-item__cta,
+  .wmc-product-carousel .slick-slide .wmc-product-carousel-item__cta {
+    padding: 4px 8px;
+    border-radius: 20px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: #106847;
+    font-size: 13px;
+    height: 38px;
+    margin: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+  
+  .wmc-advice-carousel .slick-slide .wmc-advice-carousel-item__cta:active, .wmc-advice-carousel .slick-slide .wmc-advice-carousel-item__cta:hover, .wmc-advice-carousel .slick-slide .wmc-advice-carousel-item__cta:visited,
+  .wmc-product-carousel .slick-slide .wmc-product-carousel-item__cta:active,
+  .wmc-product-carousel .slick-slide .wmc-product-carousel-item__cta:hover,
+  .wmc-product-carousel .slick-slide .wmc-product-carousel-item__cta:visited {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  
+  .wmc-product-carousel .slick-slide .wmc-product-carousel-item__link {
+    min-height: 55px;
+  }
+  
+  .wmc-product-carousel .slick-slide .wmc-product-carousel-item__img {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .wmc-product-carousel .slick-slide .wmc-product-carousel-item__meta {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 5px 0 10px;
+  }
+  
+  .wmc-product-carousel .slick-slide .wmc-product-carousel-item__price {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  
+  .wmc-advice-carousel .slick-slide .wmc-advice-carousel-item__thumbnail {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 8px 10px #0000000d;
+    box-shadow: 0 8px 10px #0000000d;
+    height: 150px;
+    margin: 0 auto 20px;
+    width: 150px;
+  }
+  
+  .wmc-advice-carousel .slick-slide .wmc-advice-carousel-item__thumbnail--hub-article {
+    background-color: #fff;
+    background-size: 60%;
+  }
+  
+  .wmc-advice-carousel .slick-slide .wmc-advice-carousel-item__link {
+    font-size: 17px;
+    min-height: 45px;
+  }
+  
+  .wmc-advice-carousel .slick-slide .wmc-advice-carousel-item__synopsis {
+    color: #464646;
+    font-size: 14px;
+  }
+  
+  @media only screen and (min-width: 375px) {
+    .wmc-product__star-ratings {
+      margin-bottom: 0;
+    }
+    .wmc-product__price {
+      float: right;
+    }
+  }
+  
+  @media only screen and (min-width: 410px) {
+    .wmc-product__title {
+      font-size: 16px;
+    }
+  }
+  
+  @media only screen and (min-width: 480px) {
+    .wmc-product-carousel .slick-slide {
+      padding: 20px 10px;
+    }
+  }
+  
+  @media only screen and (min-width: 600px) {
+    .product-list-tabs__control {
+      font-size: 18px;
+      line-height: 1;
+      padding: 25px 10px;
+    }
+    .product-list-tabs__control-icon {
+      display: inline-block !important;
+      margin-right: 10px;
+    }
+  }
+  
+  @media only screen and (min-width: 768px) {
+    #wmc-wrapper {
+      margin-top: -30px;
+    }
     .wmc-title {
-      color: #8e98c9;
-      font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
-      font-size: 30px;
-      font-weight: bold;
-      line-height: 1.3;
-      margin: 0 0 20px;
-      text-align: center;
+      font-size: 46px;
+      line-height: 1.2;
+      margin-bottom: 30px;
     }
-    
-    .wmc-title--white {
-      color: #fff;
-    }
-    
     .wmc-section {
-      background-color: #f7f7f7;
-      padding: 40px 20px;
+      padding-top: 60px;
+      padding-bottom: 60px;
     }
-    
     .wmc-section--has-img {
-      background-color: #7c81a9;
-      background-repeat: no-repeat;
-      background-position: 50% 0%;
-      background-size: 100% auto;
-      position: relative;
+      background-attachment: fixed;
+      background-size: cover;
     }
-    
-    .wmc-section--has-img:before {
-      background: #484f75;
-      content: '';
-      display: block;
-      height: 100%;
+    .wmc-tip {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      min-height: 160px;
+      padding: 30px 0 30px 130px;
+    }
+    .wmc-tip__icon-wrap {
+      height: 100px;
+      float: left;
       left: 0;
-      opacity: .6;
+      margin: 0;
+      min-width: 100px;
+      top: 30px;
+      width: 100px;
+    }
+    .wmc-tip__icon {
+      font-size: 40px;
+      top: 30px;
+    }
+    .wmc-tip__icon.fa-heartbeat {
+      top: 30px;
+    }
+    .wmc-tip__body {
+      font-size: 18px;
+      float: right;
+      line-height: 28px;
+    }
+    .wmc-bio {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      min-height: 170px;
+      padding: 0 0 0 200px;
+      text-align: left;
+    }
+    .wmc-bio__photo {
+      left: 0;
+      margin: 0;
       position: absolute;
       top: 0;
-      width: 100%;
     }
-    
-    .wmc-section__inner {
-      margin: 0 auto;
-      position: relative;
-    }
-    
-    .wmc-section--intro {
-      background-image: url("/__ssobj/static/wmc-intro-bg-mob_5.jpg");
-    }
-    
-    .wmc-section--intro .wmc-section__inner {
-      max-width: 1060px;
-    }
-    
-    .wmc-tip {
-      border-bottom: 1px solid #8e98c9;
-      padding: 45px 0;
-      position: relative;
-      text-align: center;
-    }
-    
-    .wmc-tip:nth-child(1) {
-      border-top: 1px solid #8e98c9;
-      display: block;
-    }
-    
-    .wmc-tip:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-    
-    .wmc-tip__icon-wrap {
-      background: #8e98c9;
-      -webkit-box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.15);
-      box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.15);
-      border-radius: 50%;
-      display: block;
-      height: 50px;
-      margin: 0 auto 20px;
-      min-width: 50px;
-      text-align: center;
-      width: 50px;
-      position: absolute;
-      top: -25px;
-      left: 50%;
-      margin-left: -25px;
-    }
-    
-    .wmc-tip__icon {
-      color: #fff;
-      font-size: 26px;
-      position: relative;
-      top: 12px;
-    }
-    
-    .wmc-tip__icon.fa-heartbeat {
-      top: 12px;
-    }
-    
-    .wmc-tip__body {
-      color: #fff;
-      font-size: 16px;
-      line-height: 26px;
-      margin: 0;
-    }
-    
-    .wmc-bio {
-      margin: 30px 0 50px;
-      padding: 0;
-      position: relative;
-      text-align: center;
-    }
-    
-    .wmc-bio__photo {
-      border-radius: 50%;
-      border: 4px solid #8e98c9;
-      display: block;
-      height: 170px;
-      margin: 0 auto 20px;
-      width: 170px;
-    }
-    
     .wmc-bio__quote {
-      color: #fff;
-      font-family: Georgia, Sans-serif;
-      font-size: 18px;
-      font-style: italic;
-      line-height: 1.5;
-      margin: 0;
-      position: relative;
-      quotes: "“";
+      font-size: 22px;
     }
-    
     .wmc-bio__quote:before {
-      color: #fff;
-      content: open-quote;
-      display: inline-block;
-      font-size: 120px;
-      height: 0;
-      line-height: 1;
-      left: -5px;
-      opacity: .4;
-      position: absolute;
-      top: -25px;
+      font-size: 150px;
+      left: -35px;
+      top: -30px;
     }
-    
     .wmc-bio__cite {
-      color: #fff;
-      font-size: 14px;
-      margin: 15px 0 0;
+      font-size: 16px;
     }
-    
-    .wmc-section--products {
-      background-image: url("/__ssobj/static/wmc-products-bg-mob_5.jpg");
-    }
-    
-    .wmc-products-wrap {
-      -webkit-box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.3);
-      box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.3);
-      margin: 0 auto;
+    .product-list-tabs {
       max-width: 820px;
     }
-    
-    .wmc-products {
+    .product-list-tabs__control {
+      font-size: 20px;
+      padding: 30px 20px;
+      width: 40%;
+    }
+    .wmc-product {
+      min-height: 190px;
+      padding: 30px 30px 30px 190px;
+    }
+    .wmc-product__promo-banner {
+      font-size: 14px;
+      left: -35px;
+      padding: 5px 20px;
+      position: absolute;
+      top: 30px;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      width: 155px;
+    }
+    .wmc-product__promo-banner--long {
+      font-size: 12px;
+      padding: 5px 35px;
+      top: 23px;
+      line-height: 1.2;
+    }
+    .wmc-product__img {
+      left: 30px;
+      max-width: 130px;
+      top: 30px;
+    }
+    .wmc-product__side {
+      min-height: 0;
+      padding-left: 0;
+    }
+    .wmc-product__title {
+      font-size: 20px !important;
+      padding-top: 0;
+    }
+    .wmc-product__desc {
+      font-size: 16px;
+    }
+    .wmc-product__price {
+      font-size: 18px;
+    }
+    .wmc-product__cta {
+      width: 140px;
+    }
+    .wmc-product:nth-child(even) {
+      padding-left: 30px;
+      padding-right: 190px;
+    }
+    .wmc-product:nth-child(even) .wmc-product__side {
+      padding-right: 0;
+    }
+    .wmc-product:nth-child(even) .wmc-product__img {
+      right: 40px;
+    }
+    .wmc-product:nth-child(even) .wmc-product__promo-banner {
+      left: auto;
+      right: -35px;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+    #wmc-product-carousel {
       display: none;
     }
-    
-    .wmc-products--active {
-      display: block;
-    }
-    
-    .product-list-tabs {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      font-size: 0;
-      -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-      justify-content: space-evenly;
-      list-style: none;
-      margin: 0 auto;
-      padding: 0;
-      text-align: center;
-    }
-    
-    .product-list-tabs__control {
-      background: #e2e2e2;
-      border-radius: 5px 5px 0 0;
-      color: #696969;
-      cursor: pointer;
-      display: inline-block;
-      font-size: 15px;
-      font-weight: 100;
-      line-height: 1.3;
-      max-width: 350px;
-      padding: 20px 10px 17px;
-      text-align: center;
-      width: 45%;
-    }
-    
-    .product-list-tabs__control--active {
-      background: #f7f4f4;
-    }
-    
-    .product-list-tabs__control-icon {
-      display: none !important;
-    }
-    
-    .wmc-product {
-      background: #fff;
-      background: -webkit-gradient(linear, left top, left bottom, from(#f7f4f4), to(#ffffff));
-      background: linear-gradient(to bottom, #f7f4f4 0%, #ffffff 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f4f4', endColorstr='#ffffff',GradientType=0 );
-      border-bottom: 1px solid #eaeaea;
-      overflow: hidden;
-      padding: 20px;
-      position: relative;
-    }
-    
-    .wmc-product__promo-banner {
-      background: #ED028B;
-      color: #fff;
-      display: block;
-      font-size: 13px;
-      font-weight: bold;
-      line-height: 1;
-      margin-bottom: 10px;
-      padding: 7px 20px;
-      text-align: center;
-      z-index: 1;
-      width: 100%;
-    }
-    
-    .wmc-product__img {
-      height: auto;
-      left: 20px;
-      max-width: 100px;
-      position: absolute;
-      top: 20px;
-      width: 100%;
-    }
-    
-    .wmc-product__side {
-      min-height: 110px;
-      padding-left: 120px;
-    }
-    
-    .wmc-product__title {
-      font-size: 14px;
-      font-weight: bold;
-      margin: 0 0 10px;
-      padding-top: 5px;
-    }
-    
-    .wmc-product__title-link {
-      color: #0a623f;
-      text-decoration: none;
-    }
-    
-    .wmc-product__title-link:hover {
-      text-decoration: underline;
-    }
-    
-    .wmc-product__desc {
-      color: #565656;
-      font-size: 14px;
-      margin: 0;
-    }
-    
-    .wmc-product__meta {
-      margin-bottom: 10px;
-    }
-    
-    .wmc-product__star-ratings, .wmc-product__rating {
-      background-image: url("https://www.hollandandbarrett.com/__ssobj/static/ratings-stars-18px.png");
-      background-repeat: repeat-x;
-      display: block;
-      height: 18px;
-    }
-    
-    .wmc-product__star-ratings {
-      background-position: left top;
-      float: left;
-      margin-bottom: 10px;
-      position: relative;
-      width: 98px;
-    }
-    
-    .wmc-product__rating {
-      background-position: left -18px;
-      height: 18px;
-      display: block;
-      content: '';
-      width: 50px;
-      max-width: 98px;
-    }
-    
-    .wmc-product__price {
-      color: #333;
-      font-size: 14px;
-      font-weight: bold;
-    }
-    
-    .wmc-product__cta {
-      background: #106847;
-      border: none;
-      border-radius: 20px;
-      color: #fff;
-      cursor: pointer;
-      font-size: 14px;
-      font-weight: bold;
-      height: 38px;
-      margin-top: 20px;
-      outline: none;
-      position: relative;
-      width: 100%;
-    }
-    
-    .wmc-product__cta:hover {
-      background: #2a5f51;
-    }
-    
-    .wmc-product__cta:active {
-      background: #4d8071;
-      bottom: -1px;
-      right: -1px;
-    }
-    
-    .wmc-product:first-child {
-      border-radius: 5px 5px 0 0;
-    }
-    
-    .wmc-product:last-child {
-      border-radius: 0 0 5px 5px;
-    }
-    
-    .wmc-product:nth-child(even) .wmc-product__side {
-      padding-left: 0;
-      padding-right: 120px;
-    }
-    
-    .wmc-product:nth-child(even) .wmc-product__img {
-      left: auto;
-      right: 20px;
-    }
-    
-    @-webkit-keyframes quick-order-loading {
-      0% {
-        -webkit-transform: rotate(0);
-        transform: rotate(0);
-      }
-      100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-      }
-    }
-    
-    @keyframes quick-order-loading {
-      0% {
-        -webkit-transform: rotate(0);
-        transform: rotate(0);
-      }
-      100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-      }
-    }
-    
-    .wmc-product__cta.in-progress:before,
-    .wmc-product-carousel-item__cta.quickAdd.in-progress:before {
-      content: '';
-      display: inline-block;
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      border: 3px solid transparent;
-      border-left-color: #fff;
-      -webkit-animation: quick-order-loading 1500ms infinite linear;
-      animation: quick-order-loading 1500ms infinite linear;
-    }
-    
-    .slick-arrow,
-    .slick-arrow:active,
-    .slick-arrow:hover {
-      -webkit-box-shadow: none;
-      box-shadow: none;
-      background: #ffffff82;
-      border-radius: 50%;
-      height: 35px;
-      width: 35px;
-    }
-    
-    .slick-prev,
-    .slick-prev:active {
-      left: -2%;
-    }
-    
-    .slick-next,
-    .slick-next:active {
-      right: -2%;
-    }
-    
-    .slick-prev:before {
-      left: 12px;
-    }
-    
-    .slick-next:before {
-      right: 12px;
-    }
-    
     .wmc-advice-carousel .slick-arrow,
     .wmc-product-carousel .slick-arrow {
-      top: 30%;
+      top: 58px;
     }
-    
     .wmc-advice-carousel,
     .wmc-product-carousel {
-      margin: 0 auto;
-      position: relative;
+      max-width: 1100px;
     }
-    
-    .wmc-advice-carousel .slick-slide,
     .wmc-product-carousel .slick-slide {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      position: relative;
-      -webkit-transition: opacity .2s ease;
-      transition: opacity .2s ease;
-    }
-    
-    .wmc-advice-carousel .slick-slide:focus,
-    .wmc-product-carousel .slick-slide:focus {
-      outline: none;
-    }
-    
-    .wmc-product-carousel .slick-slide {
-      background: #fff;
-      border-radius: 5px;
-      opacity: .4;
-      padding: 20px;
-      width: 200px;
-    }
-    
-    .wmc-product-carousel .slick-slide.slick-active {
       opacity: 1;
     }
-    
-    .wmc-advice-carousel .slick-slide {
-      width: 400px;
-    }
-    
-    .wmc-advice-carousel .slick-slide .wmc-advice-carousel-item__link,
     .wmc-product-carousel .slick-slide .wmc-product-carousel-item__link {
-      color: #3f796a;
-      display: inline-block;
-      font-size: 14px;
-      margin-top: 20px;
+      top: 160px;
     }
-    
-    .wmc-advice-carousel .slick-slide .wmc-advice-carousel-item__promo-banner,
-    .wmc-product-carousel .slick-slide .wmc-product-carousel-item__promo-banner {
-      position: absolute;
-      background: #ED028B;
-      bottom: 165px;
-      width: 90%;
-      text-align: center;
-      font-weight: bold;
-      font-size: 12px;
-      padding: 5px 0;
-      color: #fff;
-      border-radius: 2px;
+  }
+  
+  @media only screen and (min-width: 992px) {
+    .wmc-title {
+      font-size: 54px;
     }
-    
-    .wmc-advice-carousel .slick-slide .wmc-advice-carousel-item__cta,
-    .wmc-product-carousel .slick-slide .wmc-product-carousel-item__cta {
-      padding: 4px 8px;
-      border-radius: 20px;
-      -webkit-box-shadow: none;
-      box-shadow: none;
-      background-color: #106847;
-      font-size: 13px;
-      height: 38px;
-      margin: 0;
-      -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-      flex-grow: 1;
+    .wmc-tip__body {
+      font-size: 20px;
+      line-height: 30px;
     }
-    
-    .wmc-advice-carousel .slick-slide .wmc-advice-carousel-item__cta:active, .wmc-advice-carousel .slick-slide .wmc-advice-carousel-item__cta:hover, .wmc-advice-carousel .slick-slide .wmc-advice-carousel-item__cta:visited,
-    .wmc-product-carousel .slick-slide .wmc-product-carousel-item__cta:active,
-    .wmc-product-carousel .slick-slide .wmc-product-carousel-item__cta:hover,
-    .wmc-product-carousel .slick-slide .wmc-product-carousel-item__cta:visited {
-      outline: none;
-      -webkit-box-shadow: none;
-      box-shadow: none;
+    .wmc-bio {
+      padding-right: 30px;
+      padding-left: 260px;
     }
-    
-    .wmc-product-carousel .slick-slide .wmc-product-carousel-item__link {
-      min-height: 55px;
+    .wmc-bio__photo {
+      left: 30px;
     }
-    
-    .wmc-product-carousel .slick-slide .wmc-product-carousel-item__img {
-      display: block;
-      height: auto;
-      margin: 0 auto;
-      width: 100%;
+    .wmc-bio__quote {
+      font-size: 26px;
+      line-height: 1.4;
     }
-    
-    .wmc-product-carousel .slick-slide .wmc-product-carousel-item__meta {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      padding: 5px 0 10px;
+    .wmc-bio__quote:before {
+      font-size: 200px;
+      left: -50px;
+      top: -50px;
     }
-    
-    .wmc-product-carousel .slick-slide .wmc-product-carousel-item__price {
-      font-size: 15px;
-      font-weight: bold;
+    .wmc-product {
+      min-height: 280px;
+      padding: 40px 40px 40px 280px;
     }
-    
-    .wmc-advice-carousel .slick-slide .wmc-advice-carousel-item__thumbnail {
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
-      border-radius: 50%;
-      -webkit-box-shadow: 0 8px 10px #0000000d;
-      box-shadow: 0 8px 10px #0000000d;
-      height: 150px;
-      margin: 0 auto 20px;
-      width: 150px;
+    .wmc-product__img {
+      max-width: 200px;
     }
-    
-    .wmc-advice-carousel .slick-slide .wmc-advice-carousel-item__thumbnail--hub-article {
-      background-color: #fff;
-      background-size: 60%;
+    .wmc-product:nth-child(even) {
+      padding-left: 40px;
+      padding-right: 280px;
     }
-    
-    .wmc-advice-carousel .slick-slide .wmc-advice-carousel-item__link {
-      font-size: 17px;
-      min-height: 45px;
+  }
+  
+  @media only screen and (min-width: 1250px) {
+    .wmc-title {
+      font-size: 62px;
+      margin-bottom: 50px;
     }
-    
-    .wmc-advice-carousel .slick-slide .wmc-advice-carousel-item__synopsis {
-      color: #464646;
-      font-size: 14px;
+    .wmc-section {
+      padding-top: 80px;
+      padding-bottom: 80px;
     }
-    
-    @media only screen and (min-width: 375px) {
-      .wmc-product__star-ratings {
-        margin-bottom: 0;
-      }
-      .wmc-product__price {
-        float: right;
-      }
+    .wmc-section--intro {
+      background-image: url("/__ssobj/static/wmc-intro-bg_3.jpg");
     }
-    
-    @media only screen and (min-width: 410px) {
-      .wmc-product__title {
-        font-size: 16px;
-      }
+    .wmc-tip {
+      min-height: 0;
+      padding: 40px 0;
+      text-align: left;
     }
-    
-    @media only screen and (min-width: 480px) {
-      .wmc-product-carousel .slick-slide {
-        padding: 20px 10px;
-      }
+    .wmc-tip__icon-wrap {
+      position: relative;
+      margin-right: 40px;
+      top: 0;
     }
-    
-    @media only screen and (min-width: 600px) {
-      .product-list-tabs__control {
-        font-size: 18px;
-        line-height: 1;
-        padding: 25px 10px;
-      }
-      .product-list-tabs__control-icon {
-        display: inline-block !important;
-        margin-right: 10px;
-      }
+    .wmc-tip__body {
+      width: 920px;
     }
-    
-    @media only screen and (min-width: 768px) {
-      #wmc-wrapper {
-        margin-top: -30px;
-      }
-      .wmc-title {
-        font-size: 46px;
-        line-height: 1.2;
-        margin-bottom: 30px;
-      }
-      .wmc-section {
-        padding-top: 60px;
-        padding-bottom: 60px;
-      }
-      .wmc-section--has-img {
-        background-attachment: fixed;
-        background-size: cover;
-      }
-      .wmc-tip {
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        min-height: 160px;
-        padding: 30px 0 30px 130px;
-      }
-      .wmc-tip__icon-wrap {
-        height: 100px;
-        float: left;
-        left: 0;
-        margin: 0;
-        min-width: 100px;
-        top: 30px;
-        width: 100px;
-      }
-      .wmc-tip__icon {
-        font-size: 40px;
-        top: 30px;
-      }
-      .wmc-tip__icon.fa-heartbeat {
-        top: 30px;
-      }
-      .wmc-tip__body {
-        font-size: 18px;
-        float: right;
-        line-height: 28px;
-      }
-      .wmc-bio {
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        margin-top: 40px;
-        margin-bottom: 40px;
-        min-height: 170px;
-        padding: 0 0 0 200px;
-        text-align: left;
-      }
-      .wmc-bio__photo {
-        left: 0;
-        margin: 0;
-        position: absolute;
-        top: 0;
-      }
-      .wmc-bio__quote {
-        font-size: 22px;
-      }
-      .wmc-bio__quote:before {
-        font-size: 150px;
-        left: -35px;
-        top: -30px;
-      }
-      .wmc-bio__cite {
-        font-size: 16px;
-      }
-      .product-list-tabs {
-        max-width: 820px;
-      }
-      .product-list-tabs__control {
-        font-size: 20px;
-        padding: 30px 20px;
-        width: 40%;
-      }
-      .wmc-product {
-        min-height: 190px;
-        padding: 30px 30px 30px 190px;
-      }
-      .wmc-product__promo-banner {
-        font-size: 14px;
-        left: -35px;
-        padding: 5px 20px;
-        position: absolute;
-        top: 30px;
-        -webkit-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-        width: 155px;
-      }
-      .wmc-product__promo-banner--long {
-        font-size: 12px;
-        padding: 5px 35px;
-        top: 23px;
-        line-height: 1.2;
-      }
-      .wmc-product__img {
-        left: 30px;
-        max-width: 130px;
-        top: 30px;
-      }
-      .wmc-product__side {
-        min-height: 0;
-        padding-left: 0;
-      }
-      .wmc-product__title {
-        font-size: 20px !important;
-        padding-top: 0;
-      }
-      .wmc-product__desc {
-        font-size: 16px;
-      }
-      .wmc-product__price {
-        font-size: 18px;
-      }
-      .wmc-product__cta {
-        width: 140px;
-      }
-      .wmc-product:nth-child(even) {
-        padding-left: 30px;
-        padding-right: 190px;
-      }
-      .wmc-product:nth-child(even) .wmc-product__side {
-        padding-right: 0;
-      }
-      .wmc-product:nth-child(even) .wmc-product__img {
-        right: 40px;
-      }
-      .wmc-product:nth-child(even) .wmc-product__promo-banner {
-        left: auto;
-        right: -35px;
-        -webkit-transform: rotate(45deg);
-        transform: rotate(45deg);
-      }
-      #wmc-product-carousel {
-        display: none;
-      }
-      .wmc-advice-carousel .slick-arrow,
-      .wmc-product-carousel .slick-arrow {
-        top: 58px;
-      }
-      .wmc-advice-carousel,
-      .wmc-product-carousel {
-        max-width: 1100px;
-      }
-      .wmc-product-carousel .slick-slide {
-        opacity: 1;
-      }
-      .wmc-product-carousel .slick-slide .wmc-product-carousel-item__link {
-        top: 160px;
-      }
+    .wmc-bio {
+      margin-top: 50px;
     }
-    
-    @media only screen and (min-width: 992px) {
-      .wmc-title {
-        font-size: 54px;
-      }
-      .wmc-tip__body {
-        font-size: 20px;
-        line-height: 30px;
-      }
-      .wmc-bio {
-        padding-right: 30px;
-        padding-left: 260px;
-      }
-      .wmc-bio__photo {
-        left: 30px;
-      }
-      .wmc-bio__quote {
-        font-size: 26px;
-        line-height: 1.4;
-      }
-      .wmc-bio__quote:before {
-        font-size: 200px;
-        left: -50px;
-        top: -50px;
-      }
-      .wmc-product {
-        min-height: 280px;
-        padding: 40px 40px 40px 280px;
-      }
-      .wmc-product__img {
-        max-width: 200px;
-      }
-      .wmc-product:nth-child(even) {
-        padding-left: 40px;
-        padding-right: 280px;
-      }
+    .wmc-section--products {
+      background-image: url("/__ssobj/static/wmc-products-bg_3.jpg");
     }
-    
-    @media only screen and (min-width: 1250px) {
-      .wmc-title {
-        font-size: 62px;
-        margin-bottom: 50px;
-      }
-      .wmc-section {
-        padding-top: 80px;
-        padding-bottom: 80px;
-      }
-      .wmc-section--intro {
-        background-image: url("/__ssobj/static/wmc-intro-bg_3.jpg");
-      }
-      .wmc-tip {
-        min-height: 0;
-        padding: 40px 0;
-        text-align: left;
-      }
-      .wmc-tip__icon-wrap {
-        position: relative;
-        margin-right: 40px;
-        top: 0;
-      }
-      .wmc-tip__body {
-        width: 920px;
-      }
-      .wmc-bio {
-        margin-top: 50px;
-      }
-      .wmc-section--products {
-        background-image: url("/__ssobj/static/wmc-products-bg_3.jpg");
-      }
-      .product-list-tabs__control {
-        font-size: 24px;
-        width: 45%;
-      }
-      .slick-prev,
-      .slick-prev:active {
-        left: -4%;
-      }
-      .slick-next,
-      .slick-next:active {
-        right: -4%;
-      }
+    .product-list-tabs__control {
+      font-size: 24px;
+      width: 45%;
     }
-    </style>
-    
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-      </head>
-      $1
-    
-    <script>
-    "use strict";
-    
-    (function (window, document) {
-      var container = $('body > div[role="main"] > div:nth-of-type(1)');
-      var baseURL = 'https://www.hollandandbarrett.com/shop/product/';
-      var baseImgURL = 'https://images.hollandandbarrettimages.co.uk/productimages/';
-      var promoProfiles = {
-        penny: {
-          name: 'Penny Sale',
-          backgroundColor: '#ED028B',
-          size: ''
-        },
-        thirtyThreeOff: {
-          name: '33% off',
-          backgroundColor: '#c73536',
-          size: ''
-        },
-        twentyFiveOff: {
-          name: '25% off',
-          backgroundColor: '#c73536',
-          size: ''
-        },
-        halfPrice: {
-          name: 'Half Price',
-          backgroundColor: '#c73536',
-          size: ''
-        },
-        bogohp: {
-          name: 'Buy One Get One Half Price',
-          backgroundColor: '#c73536',
-          size: 'long'
-        },
-        bthp: {
-          name: 'Better than Half Price',
-          backgroundColor: '#c73536',
-          size: 'long'
-        }
-      };
-      var products = [{
-        name: 'Garbanzo Dry Roasted Chickpeas Thai Sweet Chilli 65g',
-        sku: '098299',
-        productId: '60098299',
-        url: 'garbanzo-dry-roasted-chickpeas-thai-sweet-chilli-60098299?skuid=098299',
-        price: 0.50,
-        rating: 4.5,
-        promo: promoProfiles.bogohp,
-        description: 'Garbanzo Dry Roasted Chickpeas Thai Sweet Chilli flavour are slow roasted, deliciously nutty and crunchy, and seasoned with a unique blend of sweet and spice. Garbanzo is a delicious low calorie snack that helps to keep you fuller for longer.',
-        img: 'HB/724/098299_A.jpg',
-        tag: 'food'
+    .slick-prev,
+    .slick-prev:active {
+      left: -4%;
+    }
+    .slick-next,
+    .slick-next:active {
+      right: -4%;
+    }
+  }
+  </style>
+  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    </head>
+    $1
+  
+  <script>
+  "use strict";
+  
+  (function (window, document) {
+    var container = $('body > div[role="main"] > div:nth-of-type(1)');
+    var baseURL = 'https://www.hollandandbarrett.com/shop/product/';
+    var baseImgURL = 'https://images.hollandandbarrettimages.co.uk/productimages/';
+    var promoProfiles = {
+      penny: {
+        name: 'Penny Sale',
+        backgroundColor: '#ED028B',
+        size: ''
+      },
+      thirtyThreeOff: {
+        name: '33% off',
+        backgroundColor: '#c73536',
+        size: ''
+      },
+      twentyFiveOff: {
+        name: '25% off',
+        backgroundColor: '#c73536',
+        size: ''
+      },
+      halfPrice: {
+        name: 'Half Price',
+        backgroundColor: '#c73536',
+        size: ''
+      },
+      bogohp: {
+        name: 'Buy One Get One Half Price',
+        backgroundColor: '#c73536',
+        size: 'long'
+      },
+      bthp: {
+        name: 'Better than Half Price',
+        backgroundColor: '#c73536',
+        size: 'long'
+      }
+    };
+    var products = [{
+      name: 'Garbanzo Dry Roasted Chickpeas Thai Sweet Chilli 65g',
+      sku: '098299',
+      productId: '60098299',
+      url: 'garbanzo-dry-roasted-chickpeas-thai-sweet-chilli-60098299?skuid=098299',
+      price: 0.50,
+      rating: 4.5,
+      promo: promoProfiles.bogohp,
+      description: 'Garbanzo Dry Roasted Chickpeas Thai Sweet Chilli flavour are slow roasted, deliciously nutty and crunchy, and seasoned with a unique blend of sweet and spice. Garbanzo is a delicious low calorie snack that helps to keep you fuller for longer.',
+      img: 'HB/724/098299_A.jpg',
+      tag: 'food'
+    }, {
+      name: 'Holland & Barrett 100% Organic Jumbo Oats 1kg',
+      sku: '039796',
+      productId: '60039796',
+      url: 'holland-barrett-100-organic-jumbo-oats-60039796?skuid=039796',
+      price: 2.69,
+      rating: 4.5,
+      promo: promoProfiles.bogohp,
+      description: 'Nothing artificial. Just good, pure oats. Perfect for your favourite breakfast and baking recipes.',
+      img: 'HB/724/039796_A.jpg',
+      tag: 'food'
+    }, {
+      name: 'Holland & Barrett Pitted Prunes 400g',
+      sku: '081285',
+      productId: '60081285',
+      url: 'holland-barrett-pitted-prunes-60081285?skuid=081285',
+      price: 3.99,
+      rating: 4.4,
+      promo: promoProfiles.bogohp,
+      description: 'Our Holland & Barrett Prime Pitted Prunes are soft, succulent and whole pitted. Add to your breakfast in the morning for a low fat addition, or enjoy as a tasty snack!',
+      img: 'HB/724/081285_A.jpg',
+      tag: 'food'
+    }, {
+      name: 'Holland & Barrett Almonds 100g',
+      sku: '090987',
+      productId: '60090987',
+      url: 'holland-barrett-almonds-60090987?skuid=090987',
+      price: 1.79,
+      rating: 4.6,
+      promo: promoProfiles.bogohp,
+      description: 'Available in a range of pack sizes, these awesome almonds are great for lunchboxes, cooking or baking, or perfect as an addictively moreish (and nutritious) party snack!',
+      img: 'HB/724/090987_A.jpg',
+      tag: 'food'
+    }, {
+      name: 'Holland & Barrett Chia Seeds 275g',
+      sku: '004458',
+      productId: '60004458',
+      url: 'holland-barrett-chia-seeds-60004458?skuid=004458',
+      price: 4.29,
+      rating: 4.7,
+      promo: promoProfiles.bogohp,
+      description: 'Our Holland & Barrett Clever Chia Seeds are completely natural and are a must-have ingredient for the home baker! These tasty little seeds can be added to cereal, porridge, yoghurts, baking mixes and much, much more.',
+      img: 'HB/724/004458_A.jpg',
+      tag: 'food'
+    }, {
+      name: 'Boombod 7 Day Achiever 21 Sachets',
+      sku: '017346',
+      productId: '60017346',
+      url: 'boombod-7-day-achiever-21-sachets-60017346?skuid=017346',
+      price: 14.99,
+      rating: 4.0,
+      promo: promoProfiles.bthp,
+      description: 'Boombod sachets contain a quality source of the natural fibre glucomannan that reduces appetite, helps cleanse & decreases bloating.',
+      img: 'HB/724/017346_A.png',
+      tag: 'vhms'
+    }, {
+      name: 'Holland & Barrett Raspberry Ketone Complex Capsules',
+      sku: '021031',
+      productId: '60021031',
+      url: 'holland-barrett-raspberry-ketone-complex-capsules-60021031?skuid=021031',
+      price: 19.99,
+      rating: 3.9,
+      promo: promoProfiles.bogohp,
+      description: 'Glucomannan has almost no calories, but is very high in fibre. It absorbs water in the stomach. When in contact with water, glucomannan expands and can absorb up to 50 times its weight.',
+      img: 'HB/724/021031_A.png',
+      tag: 'vhms'
+    }, {
+      name: 'Holland & Barrett Super Green Tea Diet 60 Tablets',
+      sku: '013256',
+      productId: '60013256',
+      url: 'holland-barrett-super-green-tea-diet-tablets-60013256?skuid=013256',
+      price: 3.99,
+      rating: 2.9,
+      promo: promoProfiles.bthp,
+      description: 'Suitable for vegetarians, Holland & Barrett Super Green Tea Diet Tablets blend of Caffeine, Guarana, chromium, Vitamin B6, Bladderwrack, Green Tea and Uva Ursi.',
+      img: 'HB/724/013256_A.png',
+      tag: 'vhms'
+    }, {
+      name: 'Holland & Barrett Glucomannan 500mg 60 Capsules',
+      sku: '029525',
+      productId: '60029525',
+      url: 'holland-barrett-glucomannan-500mg-60029525?skuid=029525',
+      price: 7.99,
+      rating: 3.9,
+      promo: promoProfiles.bogohp,
+      description: 'Holland & Barrett Glucomannan (Konjac fibre) is a natural ingredient that in the context of a calorie controlled diet contributes to weight loss.',
+      img: 'HB/724/029525_A.png',
+      tag: 'vhms'
+    }, {
+      name: 'Nutritional Headquarters Fat Metaboliser 120 Tablets',
+      sku: '010212',
+      productId: '60010210',
+      url: 'nutritional-headquarters-fat-metaboliser-tablets-60010210?skuid=010212',
+      price: 12.99,
+      rating: 3.4,
+      promo: promoProfiles.bogohp,
+      description: 'Fat Metaboliser tablets provide a combination of vitamins, minerals and botanical extracts, alongside a 14-day diet plan, to help you reach your weight management goals.',
+      img: 'HB/724/010212_A.png',
+      tag: 'vhms'
+    }];
+  
+    function initIntro() {
+      var tipsHtml = '';
+      var introTitle = 'Discover expert advice & products to support your weight goals';
+      var tips = [{
+        'icon': 'fas fa-heartbeat',
+        'body': 'When looking to lose weight, you may be tempted to go for the ‘low fat’ and ‘low sugar’ alternatives in the supermarket. Although these are marketed as healthy options, they’re rarely lower in calories than regular food products.'
       }, {
-        name: 'Holland & Barrett 100% Organic Jumbo Oats 1kg',
-        sku: '039796',
-        productId: '60039796',
-        url: 'holland-barrett-100-organic-jumbo-oats-60039796?skuid=039796',
-        price: 2.69,
-        rating: 4.5,
-        promo: promoProfiles.bogohp,
-        description: 'Nothing artificial. Just good, pure oats. Perfect for your favourite breakfast and baking recipes.',
-        img: 'HB/724/039796_A.jpg',
-        tag: 'food'
+        'icon': 'fas fa-apple-alt',
+        'body': 'When you’re on the go, take healthy snacks with you so you eat the right foods all the time and minimise the chance of grabbing an unhealthy alternative. I recommend high-protein snacks that help keep you fuller for longer: nuts, roasted chickpeas or a protein energy ball.'
       }, {
-        name: 'Holland & Barrett Pitted Prunes 400g',
-        sku: '081285',
-        productId: '60081285',
-        url: 'holland-barrett-pitted-prunes-60081285?skuid=081285',
-        price: 3.99,
-        rating: 4.4,
-        promo: promoProfiles.bogohp,
-        description: 'Our Holland & Barrett Prime Pitted Prunes are soft, succulent and whole pitted. Add to your breakfast in the morning for a low fat addition, or enjoy as a tasty snack!',
-        img: 'HB/724/081285_A.jpg',
-        tag: 'food'
+        'icon': 'fas fa-utensils',
+        'body': 'Do you know that using smaller plates has been shown to help some people automatically eat fewer calories? This is a classic trick that can help reset your brain into thinking you’re full.'
       }, {
-        name: 'Holland & Barrett Almonds 100g',
-        sku: '090987',
-        productId: '60090987',
-        url: 'holland-barrett-almonds-60090987?skuid=090987',
-        price: 1.79,
-        rating: 4.6,
-        promo: promoProfiles.bogohp,
-        description: 'Available in a range of pack sizes, these awesome almonds are great for lunchboxes, cooking or baking, or perfect as an addictively moreish (and nutritious) party snack!',
-        img: 'HB/724/090987_A.jpg',
-        tag: 'food'
+        'icon': 'fas fa-brain',
+        'body': 'Do you know that it takes 20 minutes for your stomach to send signals to your brain to tell it that it’s full? Eating mindfully and slowly can really help reduce overconsumption and overindulgence and help with weight loss.'
       }, {
-        name: 'Holland & Barrett Chia Seeds 275g',
-        sku: '004458',
-        productId: '60004458',
-        url: 'holland-barrett-chia-seeds-60004458?skuid=004458',
-        price: 4.29,
-        rating: 4.7,
-        promo: promoProfiles.bogohp,
-        description: 'Our Holland & Barrett Clever Chia Seeds are completely natural and are a must-have ingredient for the home baker! These tasty little seeds can be added to cereal, porridge, yoghurts, baking mixes and much, much more.',
-        img: 'HB/724/004458_A.jpg',
-        tag: 'food'
-      }, {
-        name: 'Boombod 7 Day Achiever 21 Sachets',
-        sku: '017346',
-        productId: '60017346',
-        url: 'boombod-7-day-achiever-21-sachets-60017346?skuid=017346',
-        price: 14.99,
-        rating: 4.0,
-        promo: promoProfiles.bthp,
-        description: 'Boombod sachets contain a quality source of the natural fibre glucomannan that reduces appetite, helps cleanse & decreases bloating.',
-        img: 'HB/724/017346_A.png',
-        tag: 'vhms'
-      }, {
-        name: 'Holland & Barrett Raspberry Ketone Complex Capsules',
-        sku: '021031',
-        productId: '60021031',
-        url: 'holland-barrett-raspberry-ketone-complex-capsules-60021031?skuid=021031',
-        price: 19.99,
-        rating: 3.9,
-        promo: promoProfiles.bogohp,
-        description: 'Glucomannan has almost no calories, but is very high in fibre. It absorbs water in the stomach. When in contact with water, glucomannan expands and can absorb up to 50 times its weight.',
-        img: 'HB/724/021031_A.png',
-        tag: 'vhms'
-      }, {
-        name: 'Holland & Barrett Super Green Tea Diet 60 Tablets',
-        sku: '013256',
-        productId: '60013256',
-        url: 'holland-barrett-super-green-tea-diet-tablets-60013256?skuid=013256',
-        price: 3.99,
-        rating: 2.9,
-        promo: promoProfiles.bthp,
-        description: 'Suitable for vegetarians, Holland & Barrett Super Green Tea Diet Tablets blend of Caffeine, Guarana, chromium, Vitamin B6, Bladderwrack, Green Tea and Uva Ursi.',
-        img: 'HB/724/013256_A.png',
-        tag: 'vhms'
-      }, {
-        name: 'Holland & Barrett Glucomannan 500mg 60 Capsules',
-        sku: '029525',
-        productId: '60029525',
-        url: 'holland-barrett-glucomannan-500mg-60029525?skuid=029525',
-        price: 7.99,
-        rating: 3.9,
-        promo: promoProfiles.bogohp,
-        description: 'Holland & Barrett Glucomannan (Konjac fibre) is a natural ingredient that in the context of a calorie controlled diet contributes to weight loss.',
-        img: 'HB/724/029525_A.png',
-        tag: 'vhms'
-      }, {
-        name: 'Nutritional Headquarters Fat Metaboliser 120 Tablets',
-        sku: '010212',
-        productId: '60010210',
-        url: 'nutritional-headquarters-fat-metaboliser-tablets-60010210?skuid=010212',
-        price: 12.99,
-        rating: 3.4,
-        promo: promoProfiles.bogohp,
-        description: 'Fat Metaboliser tablets provide a combination of vitamins, minerals and botanical extracts, alongside a 14-day diet plan, to help you reach your weight management goals.',
-        img: 'HB/724/010212_A.png',
-        tag: 'vhms'
+        'icon': 'fas fa-leaf',
+        'body': 'High fibre foods are an essential part of your weight management as they keep you feeling fuller for longer. They also provide additional benefits such as improved gut health. I recommend these high fibre foods: oats, prunes, potatoes and beans.'
       }];
-    
-      function initIntro() {
-        var tipsHtml = '';
-        var introTitle = 'Discover expert advice & products to support your weight goals';
-        var tips = [{
-          'icon': 'fas fa-heartbeat',
-          'body': 'When looking to lose weight, you may be tempted to go for the ‘low fat’ and ‘low sugar’ alternatives in the supermarket. Although these are marketed as healthy options, they’re rarely lower in calories than regular food products.'
-        }, {
-          'icon': 'fas fa-apple-alt',
-          'body': 'When you’re on the go, take healthy snacks with you so you eat the right foods all the time and minimise the chance of grabbing an unhealthy alternative. I recommend high-protein snacks that help keep you fuller for longer: nuts, roasted chickpeas or a protein energy ball.'
-        }, {
-          'icon': 'fas fa-utensils',
-          'body': 'Do you know that using smaller plates has been shown to help some people automatically eat fewer calories? This is a classic trick that can help reset your brain into thinking you’re full.'
-        }, {
-          'icon': 'fas fa-brain',
-          'body': 'Do you know that it takes 20 minutes for your stomach to send signals to your brain to tell it that it’s full? Eating mindfully and slowly can really help reduce overconsumption and overindulgence and help with weight loss.'
-        }, {
-          'icon': 'fas fa-leaf',
-          'body': 'High fibre foods are an essential part of your weight management as they keep you feeling fuller for longer. They also provide additional benefits such as improved gut health. I recommend these high fibre foods: oats, prunes, potatoes and beans.'
-        }];
-        var introHtml = '<section class="wmc-section wmc-section--has-img wmc-section--intro"><div class="wmc-section__inner fadeInUp"><h1 class="wmc-title wmc-title--white">' + introTitle + '</h1><div class="wmc-tips"></div></section>';
-        var bioPhotoUrl = "/__ssobj/static/hb-nutritionist-1.jpg";
-        var bioName = 'Donia';
-        var bioRole = 'Senior H&B Nutritionist';
-        var bioQuote = 'Whether you’re looking to make healthier choices at meal times or to lose a few pounds for an upcoming event, I’ve pulled together some of my top tips to help kick start your weight loss.';
-        var bioHtml = '<figure class="wmc-bio"><img src="' + bioPhotoUrl + '" class="wmc-bio__photo" alt="' + bioName + ', ' + bioRole + '" /><figcaption class="wmc-bio__quote-wrap"><p class="wmc-bio__quote">' + bioQuote + '</p><p class="wmc-bio__cite">- <strong>' + bioName + '</strong>, ' + bioRole + '</p></figcaption></figure>';
-    
-        for (var _i = 0; _i < tips.length; _i++) {
-          var tip = tips[_i];
-          tipsHtml += '<article class="wmc-tip wmc-c"><span class="wmc-tip__icon-wrap"><i class="' + tip.icon + ' wmc-tip__icon"></i></span><p class="wmc-tip__body">' + tip.body + '</p></article>';
+      var introHtml = '<section class="wmc-section wmc-section--has-img wmc-section--intro"><div class="wmc-section__inner fadeInUp"><h1 class="wmc-title wmc-title--white">' + introTitle + '</h1><div class="wmc-tips"></div></section>';
+      var bioPhotoUrl = "/__ssobj/static/hb-nutritionist-1.jpg";
+      var bioName = 'Donia';
+      var bioRole = 'Senior H&B Nutritionist';
+      var bioQuote = 'Whether you’re looking to make healthier choices at meal times or to lose a few pounds for an upcoming event, I’ve pulled together some of my top tips to help kick start your weight loss.';
+      var bioHtml = '<figure class="wmc-bio"><img src="' + bioPhotoUrl + '" class="wmc-bio__photo" alt="' + bioName + ', ' + bioRole + '" /><figcaption class="wmc-bio__quote-wrap"><p class="wmc-bio__quote">' + bioQuote + '</p><p class="wmc-bio__cite">- <strong>' + bioName + '</strong>, ' + bioRole + '</p></figcaption></figure>';
+  
+      for (var _i = 0; _i < tips.length; _i++) {
+        var tip = tips[_i];
+        tipsHtml += '<article class="wmc-tip wmc-c"><span class="wmc-tip__icon-wrap"><i class="' + tip.icon + ' wmc-tip__icon"></i></span><p class="wmc-tip__body">' + tip.body + '</p></article>';
+      }
+  
+      container.removeClass('page').append(introHtml);
+      $('.wmc-tips').before(bioHtml);
+      $('.wmc-tips').append(tipsHtml);
+    }
+  
+    ;
+  
+    function initProducts() {
+      var productTitle = 'Top Product Picks';
+      var foodTabCtrLabel = 'Healthy Food & Drink';
+      var vhmsTabCtrLabel = 'Products to Support';
+      var productsHtml = '<section class="wmc-section wmc-section--has-img wmc-section--products"><div class="wmc-section__inner"><h1 class="wmc-title wmc-title--white">' + productTitle + '</h1><ul class="product-list-tabs"><li class="product-list-tabs__control product-list-tabs__control--active js-product-tab" data-tab="food"><i class="fas fa-apple-alt product-list-tabs__control-icon"></i>' + foodTabCtrLabel + '</li><li class="product-list-tabs__control js-product-tab" data-tab="vhms"><i class="fas fa-pills product-list-tabs__control-icon"></i>' + vhmsTabCtrLabel + '</li></ul><div class="wmc-products-wrap"></div></div></section>';
+      $('.wmc-section--intro').after(productsHtml);
+    }
+  
+    ;
+  
+    function initProductList() {
+      var productHtml = '';
+      var foodProducts = $('<div class="wmc-products wmc-products--active" id="wmc-products-food"></div>');
+      var vhmsProducts = $('<div class="wmc-products" id="wmc-products-vhms"></div>');
+  
+      for (var _i2 = 0; _i2 < products.length; _i2++) {
+        var product = products[_i2];
+        var promoBannerClass = product.promo.size === 'long' ? 'wmc-product__promo-banner wmc-product__promo-banner--long' : 'wmc-product__promo-banner';
+        var promo = product.promo !== 'None' ? '<span class="' + promoBannerClass + '" style="background:' + product.promo.backgroundColor + '">' + product.promo.name + '</span>' : '';
+        var ratingWidth = product.rating * 10 * 2 + 'px';
+        var starRating = '<span class="wmc-product__star-ratings"><span class="wmc-product__rating" style="width:' + ratingWidth + '"></span></span>';
+        var imgUrl = baseImgURL + product.img;
+        var url = baseURL + product.url;
+        var price = product.price.toFixed(2);
+        productHtml = '<div class="wmc-product"><a href="' + url + '"><img src="' + imgUrl + '?i10c=img.resize(width:200,height:200)" class="wmc-product__img" width="200" height="200"></a><div class="wmc-product__side"><p class="wmc-product__title"><a href="' + url + '" class="wmc-product__title-link">' + product.name + '</a></p><div class="wmc-product__meta wmc-c">' + starRating + '<span class="wmc-product__price">&pound;' + price + '</span></div></div><div class="wmc-c"></div>' + promo + '<p class="wmc-product__desc">' + product.description + '</p><button class="wmc-product__cta quickAdd" data-sku="' + product.sku + '" data-product-id="' + product.productId + '">Quick Add</button></div>';
+        product.tag === 'food' ? foodProducts.append(productHtml) : vhmsProducts.append(productHtml);
+      }
+  
+      ;
+      $('.wmc-products-wrap').append(foodProducts).append(vhmsProducts);
+      $('.js-product-tab').click(function () {
+        var activeTabControlClass = 'product-list-tabs__control--active';
+        var activeTabClass = 'wmc-products--active';
+        var $target = $(this).data('tab');
+        $('.js-product-tab').removeClass(activeTabControlClass);
+        $(this).addClass(activeTabControlClass);
+        $('.wmc-products').removeClass(activeTabClass);
+        $('#wmc-products-' + $target).addClass(activeTabClass);
+      });
+    }
+  
+    ;
+  
+    function initAdvice() {
+      var adviceCarouselHtml = '';
+      var adviceTitle = 'Advice';
+      var articles = [{
+        title: 'Seven ways to lose weight naturally',
+        intro: 'Simple science-backed things you can do to lose naturally.',
+        image: '/the-health-hub/wp-content/uploads/2018/01/LoseWeightNaturally1-768x295.jpg',
+        url: '/the-health-hub/seven-ways-lose-weight-naturally/'
+      }, {
+        title: 'The truth about calories',
+        intro: 'We bust the myths and reveal the facts about the best types to target for slimming success.',
+        image: '/the-health-hub/wp-content/uploads/2018/01/TruthAboutCalories1-768x295.jpg',
+        url: '/the-health-hub/the-truth-about-calories/'
+      }, {
+        title: 'Is it all about healthy fats now?',
+        intro: 'Why they don’t need to be the enemy.',
+        image: '/the-health-hub/wp-content/uploads/2018/05/health-600x295.png',
+        url: '/the-health-hub/healthy-fats-now/'
+      }, {
+        title: 'How to lose weight healthily and keep it off.',
+        intro: 'The tips you actually need to slim down for life',
+        image: '/the-health-hub/wp-content/uploads/2018/01/LoseWeightHealthily1-768x295.jpg',
+        url: '/the-health-hub/lose-weight-healthily/'
+      }, {
+        title: '10 reasons running is good for you',
+        intro: 'Look after your heart, strengthens muscles, and increases bone density.',
+        image: '/the-health-hub/wp-content/uploads/2016/10/shutterstock_398069407-1-768x295.jpg',
+        url: '/the-health-hub/how-good-is-running-for-you/'
+      }, {
+        title: 'The bedroom workout',
+        intro: 'Because who has the time (or money) to hit the gym?',
+        image: '/the-health-hub/wp-content/uploads/2018/08/Bedroomworkout1-768x295.jpg',
+        url: '/the-health-hub/the-bedroom-workout/'
+      }, {
+        title: 'What’s the best diet for you?',
+        intro: 'If you’re looking to improve your wellbeing, there’s a diet that’s right for you.',
+        image: '/the-health-hub/wp-content/uploads/2019/01/weightmanagement_bestdiet_main-768x295.jpg',
+        url: '/the-health-hub/food-drink/diets/whats-the-best-diet-for-you/'
+      }];
+      var adviceHtml = '<section class="wmc-section wmc-section--advice"><div class="wmc-section__inner"><h1 class="wmc-title">' + adviceTitle + '</h1><div class="wmc-advice"><div class="wmc-carousel-container" id="wmc-advice-carousel"><div class="wmc-advice-carousel"></div></div></div></div></section>';
+      articles.forEach(function (item) {
+        var extraClass = item.title === 'Discover more' ? ' wmc-advice-carousel-item__thumbnail--hub-article' : '';
+        adviceCarouselHtml += '<div class="wmc-advice-carousel-item"><a href="' + item.url + '" class="wmc-advice-carousel-item__thumbnail' + extraClass + '" style="background-image:url(' + item.image + ')"></a><a href="' + item.url + '" class="wmc-advice-carousel-item__link">' + item.title + '</a><p class="wmc-advice-carousel-item__synopsis">' + item.intro + '</p></div>';
+      });
+      $('.wmc-section--products').after(adviceHtml);
+      $('.wmc-advice-carousel').append(adviceCarouselHtml);
+    }
+  
+    ;
+    $(document).on('click', '.quickAdd', function (e) {
+      var self = $(this);
+  
+      var _dynSessConf = $("input[name='_dynSessConf']").attr('value');
+  
+      var skuID = $(this).attr('data-sku');
+      var prodId = $(this).attr('data-product-id');
+      var data = {
+        '_dyncharset': 'UTF-8',
+        '_dynSessConf': _dynSessConf,
+        'productId': prodId,
+        'skuId': skuID,
+        'quantity': 1
+      };
+      self.html('').addClass('in-progress');
+      $.ajax({
+        url: "/modules/ajax/addItemToOrder.jsp",
+        method: "POST",
+        data: $.param(data),
+        success: function success(result) {
+          self.removeClass('in-progress').text('Added');
         }
-    
-        container.removeClass('page').append(introHtml);
-        $('.wmc-tips').before(bioHtml);
-        $('.wmc-tips').append(tipsHtml);
-      }
-    
-      ;
-    
-      function initProducts() {
-        var productTitle = 'Top Product Picks';
-        var foodTabCtrLabel = 'Healthy Food & Drink';
-        var vhmsTabCtrLabel = 'Products to Support';
-        var productsHtml = '<section class="wmc-section wmc-section--has-img wmc-section--products"><div class="wmc-section__inner"><h1 class="wmc-title wmc-title--white">' + productTitle + '</h1><ul class="product-list-tabs"><li class="product-list-tabs__control product-list-tabs__control--active js-product-tab" data-tab="food"><i class="fas fa-apple-alt product-list-tabs__control-icon"></i>' + foodTabCtrLabel + '</li><li class="product-list-tabs__control js-product-tab" data-tab="vhms"><i class="fas fa-pills product-list-tabs__control-icon"></i>' + vhmsTabCtrLabel + '</li></ul><div class="wmc-products-wrap"></div></div></section>';
-        $('.wmc-section--intro').after(productsHtml);
-      }
-    
-      ;
-    
-      function initProductList() {
-        var productHtml = '';
-        var foodProducts = $('<div class="wmc-products wmc-products--active" id="wmc-products-food"></div>');
-        var vhmsProducts = $('<div class="wmc-products" id="wmc-products-vhms"></div>');
-    
-        for (var _i2 = 0; _i2 < products.length; _i2++) {
-          var product = products[_i2];
-          var promoBannerClass = product.promo.size === 'long' ? 'wmc-product__promo-banner wmc-product__promo-banner--long' : 'wmc-product__promo-banner';
-          var promo = product.promo !== 'None' ? '<span class="' + promoBannerClass + '" style="background:' + product.promo.backgroundColor + '">' + product.promo.name + '</span>' : '';
-          var ratingWidth = product.rating * 10 * 2 + 'px';
-          var starRating = '<span class="wmc-product__star-ratings"><span class="wmc-product__rating" style="width:' + ratingWidth + '"></span></span>';
-          var imgUrl = baseImgURL + product.img;
-          var url = baseURL + product.url;
-          var price = product.price.toFixed(2);
-          productHtml = '<div class="wmc-product"><a href="' + url + '"><img src="' + imgUrl + '?i10c=img.resize(width:200,height:200)" class="wmc-product__img" width="200" height="200"></a><div class="wmc-product__side"><p class="wmc-product__title"><a href="' + url + '" class="wmc-product__title-link">' + product.name + '</a></p><div class="wmc-product__meta wmc-c">' + starRating + '<span class="wmc-product__price">&pound;' + price + '</span></div></div><div class="wmc-c"></div>' + promo + '<p class="wmc-product__desc">' + product.description + '</p><button class="wmc-product__cta quickAdd" data-sku="' + product.sku + '" data-product-id="' + product.productId + '">Quick Add</button></div>';
-          product.tag === 'food' ? foodProducts.append(productHtml) : vhmsProducts.append(productHtml);
-        }
-    
-        ;
-        $('.wmc-products-wrap').append(foodProducts).append(vhmsProducts);
-        $('.js-product-tab').click(function () {
-          var activeTabControlClass = 'product-list-tabs__control--active';
-          var activeTabClass = 'wmc-products--active';
-          var $target = $(this).data('tab');
-          $('.js-product-tab').removeClass(activeTabControlClass);
-          $(this).addClass(activeTabControlClass);
-          $('.wmc-products').removeClass(activeTabClass);
-          $('#wmc-products-' + $target).addClass(activeTabClass);
-        });
-      }
-    
-      ;
-    
-      function initAdvice() {
-        var adviceCarouselHtml = '';
-        var adviceTitle = 'Advice';
-        var articles = [{
-          title: 'Seven ways to lose weight naturally',
-          intro: 'Simple science-backed things you can do to lose naturally.',
-          image: '/the-health-hub/wp-content/uploads/2018/01/LoseWeightNaturally1-768x295.jpg',
-          url: '/the-health-hub/seven-ways-lose-weight-naturally/'
-        }, {
-          title: 'The truth about calories',
-          intro: 'We bust the myths and reveal the facts about the best types to target for slimming success.',
-          image: '/the-health-hub/wp-content/uploads/2018/01/TruthAboutCalories1-768x295.jpg',
-          url: '/the-health-hub/the-truth-about-calories/'
-        }, {
-          title: 'Is it all about healthy fats now?',
-          intro: 'Why they don’t need to be the enemy.',
-          image: '/the-health-hub/wp-content/uploads/2018/05/health-600x295.png',
-          url: '/the-health-hub/healthy-fats-now/'
-        }, {
-          title: 'How to lose weight healthily and keep it off.',
-          intro: 'The tips you actually need to slim down for life',
-          image: '/the-health-hub/wp-content/uploads/2018/01/LoseWeightHealthily1-768x295.jpg',
-          url: '/the-health-hub/lose-weight-healthily/'
-        }, {
-          title: '10 reasons running is good for you',
-          intro: 'Look after your heart, strengthens muscles, and increases bone density.',
-          image: '/the-health-hub/wp-content/uploads/2016/10/shutterstock_398069407-1-768x295.jpg',
-          url: '/the-health-hub/how-good-is-running-for-you/'
-        }, {
-          title: 'The bedroom workout',
-          intro: 'Because who has the time (or money) to hit the gym?',
-          image: '/the-health-hub/wp-content/uploads/2018/08/Bedroomworkout1-768x295.jpg',
-          url: '/the-health-hub/the-bedroom-workout/'
-        }, {
-          title: 'What’s the best diet for you?',
-          intro: 'If you’re looking to improve your wellbeing, there’s a diet that’s right for you.',
-          image: '/the-health-hub/wp-content/uploads/2019/01/weightmanagement_bestdiet_main-768x295.jpg',
-          url: '/the-health-hub/food-drink/diets/whats-the-best-diet-for-you/'
-        }];
-        var adviceHtml = '<section class="wmc-section wmc-section--advice"><div class="wmc-section__inner"><h1 class="wmc-title">' + adviceTitle + '</h1><div class="wmc-advice"><div class="wmc-carousel-container" id="wmc-advice-carousel"><div class="wmc-advice-carousel"></div></div></div></div></section>';
-        articles.forEach(function (item) {
-          var extraClass = item.title === 'Discover more' ? ' wmc-advice-carousel-item__thumbnail--hub-article' : '';
-          adviceCarouselHtml += '<div class="wmc-advice-carousel-item"><a href="' + item.url + '" class="wmc-advice-carousel-item__thumbnail' + extraClass + '" style="background-image:url(' + item.image + ')"></a><a href="' + item.url + '" class="wmc-advice-carousel-item__link">' + item.title + '</a><p class="wmc-advice-carousel-item__synopsis">' + item.intro + '</p></div>';
-        });
-        $('.wmc-section--products').after(adviceHtml);
-        $('.wmc-advice-carousel').append(adviceCarouselHtml);
-      }
-    
-      ;
-      $(document).on('click', '.quickAdd', function (e) {
-        var self = $(this);
-    
-        var _dynSessConf = $("input[name='_dynSessConf']").attr('value');
-    
-        var skuID = $(this).attr('data-sku');
-        var prodId = $(this).attr('data-product-id');
-        var data = {
-          '_dyncharset': 'UTF-8',
-          '_dynSessConf': _dynSessConf,
-          'productId': prodId,
-          'skuId': skuID,
-          'quantity': 1
-        };
-        self.html('').addClass('in-progress');
+      }).then(function () {
         $.ajax({
-          url: "/modules/ajax/addItemToOrder.jsp",
-          method: "POST",
-          data: $.param(data),
+          url: '/modules/ajax/basket-masthead.jsp',
           success: function success(result) {
-            self.removeClass('in-progress').text('Added');
+            $('.js-header-basket-link').html(result);
+            setTimeout(function () {
+              self.text('Quick Add');
+            }, 1000);
           }
-        }).then(function () {
-          $.ajax({
-            url: '/modules/ajax/basket-masthead.jsp',
-            success: function success(result) {
-              $('.js-header-basket-link').html(result);
-              setTimeout(function () {
-                self.text('Quick Add');
-              }, 1000);
-            }
-          });
         });
       });
-    
-      function initCampaign() {
-        initIntro();
-        initProducts();
-        initProductList();
-        initAdvice();
-      }
-    
-      $(document).ready(function () {
-        $('.global-banners').remove();
-        container.empty().attr('id', 'wmc-wrapper').show();
-        initCampaign();
-        $('.wmc-advice-carousel').slick({
-          centerPadding: '40px',
-          slidesToShow: 5,
-          responsive: [{
-            breakpoint: 1024,
-            settings: {
-              centerPadding: '30px',
-              slidesToShow: 3
-            }
-          }, {
-            breakpoint: 800,
-            settings: {
-              arrows: true,
-              centerMode: false,
-              slidesToShow: 2
-            }
-          }, {
-            breakpoint: 480,
-            settings: {
-              arrows: true,
-              centerMode: false,
-              slidesToShow: 1
-            }
-          }]
-        });
+    });
+  
+    function initCampaign() {
+      initIntro();
+      initProducts();
+      initProductList();
+      initAdvice();
+    }
+  
+    $(document).ready(function () {
+      $('.global-banners').remove();
+      container.empty().attr('id', 'wmc-wrapper').show();
+      initCampaign();
+      $('.wmc-advice-carousel').slick({
+        centerPadding: '40px',
+        slidesToShow: 5,
+        responsive: [{
+          breakpoint: 1024,
+          settings: {
+            centerPadding: '30px',
+            slidesToShow: 3
+          }
+        }, {
+          breakpoint: 800,
+          settings: {
+            arrows: true,
+            centerMode: false,
+            slidesToShow: 2
+          }
+        }, {
+          breakpoint: 480,
+          settings: {
+            arrows: true,
+            centerMode: false,
+            slidesToShow: 1
+          }
+        }]
       });
-    })(window, document);
-    </script>
-      </body>
+    });
+  })(window, document);
+  </script>
+    </body>
