@@ -1,8 +1,23 @@
+function _defineProperty(obj, key, value) {
+    if (key in obj) {
+        Object.defineProperty(obj, key, {
+            value: value,
+            enumerable: true,
+            configurable: true,
+            writable: true
+        });
+    } else {
+        obj[key] = value;
+    }
+    return obj;
+}
+
 (function(window, document) {
+    var _promoProfiles;
     var container = $('body > div[role="main"] > div:nth-of-type(1)');
     var baseURL = "https://www.hollandandbarrett.com/shop/product/";
     var baseImgURL = "https://images.hollandandbarrettimages.co.uk/productimages/";
-    var promoProfiles = {
+    var promoProfiles = (_promoProfiles = {
         penny: {
             name: "Penny Sale",
             backgroundColor: "#ED028B",
@@ -27,18 +42,20 @@
             name: "Buy One Get One Half Price",
             backgroundColor: "#c73536",
             size: "long"
-        },
-        bthp: {
-            name: "Better than Half Price",
-            backgroundColor: "#c73536",
-            size: "long"
-        },
-        threeForTwo: {
-            name: "3 for 2",
-            backgroundColor: "#c73536",
-            size: ""
         }
-    };
+    }, _defineProperty(_promoProfiles, "penny", {
+        name: "Buy One Get One for a Penny",
+        backgroundColor: "#c73536",
+        size: "long"
+    }), _defineProperty(_promoProfiles, "bthp", {
+        name: "Better than Half Price",
+        backgroundColor: "#c73536",
+        size: "long"
+    }), _defineProperty(_promoProfiles, "threeForTwo", {
+        name: "3 for 2",
+        backgroundColor: "#c73536",
+        size: ""
+    }), _promoProfiles);
     var products = [ {
         name: "Garbanzo Dry Roasted Chickpeas Thai Sweet Chilli 65g",
         sku: "098299",
@@ -55,9 +72,9 @@
         sku: "039796",
         productId: "60039796",
         url: "holland-barrett-100-organic-jumbo-oats-60039796?skuid=039796",
-        price: 1.8,
-        rating: 4.5,
-        promo: promoProfiles.thirtyThreeOff,
+        price: 2.69,
+        rating: 4.4,
+        promo: "None",
         description: "Nothing artificial. Just good, pure oats. Perfect for your favourite breakfast and baking recipes.",
         img: "HB/724/039796_A.jpg",
         tag: "food"
@@ -68,7 +85,7 @@
         url: "holland-barrett-pitted-prunes-60081285?skuid=081285",
         price: 3.99,
         rating: 4.4,
-        promo: promoProfiles.threeForTwo,
+        promo: promoProfiles.bogohp,
         description: "Our Holland & Barrett Prime Pitted Prunes are soft, succulent and whole pitted. Add to your breakfast in the morning for a low fat addition, or enjoy as a tasty snack!",
         img: "HB/724/081285_A.jpg",
         tag: "food"
@@ -79,7 +96,7 @@
         url: "holland-barrett-almonds-60090987?skuid=090987",
         price: 1.79,
         rating: 4.6,
-        promo: promoProfiles.threeForTwo,
+        promo: promoProfiles.bogohp,
         description: "Available in a range of pack sizes, these awesome almonds are great for lunchboxes, cooking or baking, or perfect as an addictively moreish (and nutritious) party snack!",
         img: "HB/724/090987_A.jpg",
         tag: "food"
@@ -90,7 +107,7 @@
         url: "holland-barrett-chia-seeds-60004458?skuid=004458",
         price: 4.29,
         rating: 4.7,
-        promo: "None",
+        promo: promoProfiles.bogohp,
         description: "Our Holland & Barrett Clever Chia Seeds are completely natural and are a must-have ingredient for the home baker! These tasty little seeds can be added to cereal, porridge, yoghurts, baking mixes and much, much more.",
         img: "HB/724/004458_A.jpg",
         tag: "food"
@@ -99,9 +116,9 @@
         sku: "017346",
         productId: "60017346",
         url: "boombod-7-day-achiever-21-sachets-60017346?skuid=017346",
-        price: 14.99,
+        price: 29.99,
         rating: 4,
-        promo: promoProfiles.halfPrice,
+        promo: promoProfiles.penny,
         description: "Boombod sachets contain a quality source of the natural fibre glucomannan that reduces appetite, helps cleanse & decreases bloating.",
         img: "HB/724/017346_A.png",
         tag: "vhms"
@@ -110,9 +127,9 @@
         sku: "021031",
         productId: "60021031",
         url: "holland-barrett-raspberry-ketone-complex-capsules-60021031?skuid=021031",
-        price: 9.99,
+        price: 19.99,
         rating: 4,
-        promo: promoProfiles.halfPrice,
+        promo: promoProfiles.penny,
         description: "Glucomannan has almost no calories, but is very high in fibre. It absorbs water in the stomach. When in contact with water, glucomannan expands and can absorb up to 50 times its weight.",
         img: "HB/724/021031_A.png",
         tag: "vhms"
@@ -121,9 +138,9 @@
         sku: "013256",
         productId: "60013256",
         url: "holland-barrett-super-green-tea-diet-tablets-60013256?skuid=013256",
-        price: 4.74,
+        price: 9.49,
         rating: 2.9,
-        promo: promoProfiles.halfPrice,
+        promo: promoProfiles.penny,
         description: "Suitable for vegetarians, Holland & Barrett Super Green Tea Diet Tablets blend of Caffeine, Guarana, chromium, Vitamin B6, Bladderwrack, Green Tea and Uva Ursi.",
         img: "HB/724/013256_A.png",
         tag: "vhms"
@@ -143,9 +160,9 @@
         sku: "010212",
         productId: "60010210",
         url: "nutritional-headquarters-fat-metaboliser-tablets-60010210?skuid=010212",
-        price: 6.49,
+        price: 12.99,
         rating: 3.4,
-        promo: promoProfiles.halfPrice,
+        promo: promoProfiles.penny,
         description: "Fat Metaboliser tablets provide a combination of vitamins, minerals and botanical extracts, alongside a 14-day diet plan, to help you reach your weight management goals.",
         img: "HB/724/010212_A.png",
         tag: "vhms"
