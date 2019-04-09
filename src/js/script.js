@@ -3,11 +3,6 @@
     var baseURL = 'https://www.hollandandbarrett.com/shop/product/';
     var baseImgURL = 'https://images.hollandandbarrettimages.co.uk/productimages/';
     var promoProfiles = {
-      penny: {
-        name: 'Penny Sale',
-        backgroundColor: '#ED028B',
-        size: ''
-      },
       thirtyThreeOff: {
         name: '33% off',
         backgroundColor: '#c73536',

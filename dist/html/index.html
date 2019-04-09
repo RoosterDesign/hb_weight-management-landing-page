@@ -893,31 +893,11 @@
 </head>
 $1
 <script>
-function _defineProperty(obj, key, value) {
-    if (key in obj) {
-        Object.defineProperty(obj, key, {
-            value: value,
-            enumerable: true,
-            configurable: true,
-            writable: true
-        });
-    } else {
-        obj[key] = value;
-    }
-    return obj;
-}
-
 (function(window, document) {
-    var _promoProfiles;
     var container = $('body > div[role="main"] > div:nth-of-type(1)');
     var baseURL = "https://www.hollandandbarrett.com/shop/product/";
     var baseImgURL = "https://images.hollandandbarrettimages.co.uk/productimages/";
-    var promoProfiles = (_promoProfiles = {
-        penny: {
-            name: "Penny Sale",
-            backgroundColor: "#ED028B",
-            size: ""
-        },
+    var promoProfiles = {
         thirtyThreeOff: {
             name: "33% off",
             backgroundColor: "#c73536",
@@ -937,20 +917,23 @@ function _defineProperty(obj, key, value) {
             name: "Buy One Get One Half Price",
             backgroundColor: "#c73536",
             size: "long"
+        },
+        penny: {
+            name: "Buy One Get One for a Penny",
+            backgroundColor: "#c73536",
+            size: "long"
+        },
+        bthp: {
+            name: "Better than Half Price",
+            backgroundColor: "#c73536",
+            size: "long"
+        },
+        threeForTwo: {
+            name: "3 for 2",
+            backgroundColor: "#c73536",
+            size: ""
         }
-    }, _defineProperty(_promoProfiles, "penny", {
-        name: "Buy One Get One for a Penny",
-        backgroundColor: "#c73536",
-        size: "long"
-    }), _defineProperty(_promoProfiles, "bthp", {
-        name: "Better than Half Price",
-        backgroundColor: "#c73536",
-        size: "long"
-    }), _defineProperty(_promoProfiles, "threeForTwo", {
-        name: "3 for 2",
-        backgroundColor: "#c73536",
-        size: ""
-    }), _promoProfiles);
+    };
     var products = [ {
         name: "Garbanzo Dry Roasted Chickpeas Thai Sweet Chilli 65g",
         sku: "098299",
