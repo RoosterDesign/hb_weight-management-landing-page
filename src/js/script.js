@@ -50,7 +50,7 @@
       description: 'Garbanzo Dry Roasted Chickpeas Thai Sweet Chilli flavour are slow roasted, deliciously nutty and crunchy, and seasoned with a unique blend of sweet and spice. Garbanzo is a delicious low calorie snack that helps to keep you fuller for longer.',
       img: 'HB/724/098299_A.jpg',
       tag: 'food'
-    }, { 
+    }, {  
       name: 'Holland & Barrett 100% Organic Jumbo Oats 1kg',
       sku: '039796',
       productId: '60039796',
@@ -68,7 +68,7 @@
       url: 'holland-barrett-pitted-prunes-60081285?skuid=081285',
       price: 3.99,
       rating: 4.4,
-      promo: promoProfiles.bogohp,
+      promo: promoProfiles.threeForTwo,
       description: 'Our Holland & Barrett Prime Pitted Prunes are soft, succulent and whole pitted. Add to your breakfast in the morning for a low fat addition, or enjoy as a tasty snack!',
       img: 'HB/724/081285_A.jpg',
       tag: 'food'
@@ -79,7 +79,7 @@
       url: 'holland-barrett-almonds-60090987?skuid=090987',
       price: 1.79,
       rating: 4.6,
-      promo: promoProfiles.bogohp,
+      promo: promoProfiles.threeForTwo,
       description: 'Available in a range of pack sizes, these awesome almonds are great for lunchboxes, cooking or baking, or perfect as an addictively moreish (and nutritious) party snack!',
       img: 'HB/724/090987_A.jpg',
       tag: 'food'
@@ -90,7 +90,7 @@
       url: 'holland-barrett-chia-seeds-60004458?skuid=004458',
       price: 4.29,
       rating: 4.7,
-      promo: promoProfiles.bogohp,
+      promo: promoProfiles.threeForTwo,
       description: 'Our Holland & Barrett Clever Chia Seeds are completely natural and are a must-have ingredient for the home baker! These tasty little seeds can be added to cereal, porridge, yoghurts, baking mixes and much, much more.',
       img: 'HB/724/004458_A.jpg',
       tag: 'food'
@@ -99,9 +99,9 @@
       sku: '017346',
       productId: '60017346',
       url: 'boombod-7-day-achiever-21-sachets-60017346?skuid=017346',
-      price: 29.99,
-      rating: 4.0,
-      promo: promoProfiles.penny,
+      price: 14.99,
+      rating: 4.1,
+      promo: promoProfiles.halfPrice,
       description: 'Boombod sachets contain a quality source of the natural fibre glucomannan that reduces appetite, helps cleanse & decreases bloating.',
       img: 'HB/724/017346_A.png',
       tag: 'vhms'
@@ -110,9 +110,9 @@
       sku: '021031',
       productId: '60021031',
       url: 'holland-barrett-raspberry-ketone-complex-capsules-60021031?skuid=021031',
-      price: 19.99,
+      price: 9.99,
       rating: 4.0,
-      promo: promoProfiles.penny,
+      promo: promoProfiles.halfPrice,
       description: 'Glucomannan has almost no calories, but is very high in fibre. It absorbs water in the stomach. When in contact with water, glucomannan expands and can absorb up to 50 times its weight.',
       img: 'HB/724/021031_A.png',
       tag: 'vhms'
@@ -121,9 +121,9 @@
       sku: '013256',
       productId: '60013256',
       url: 'holland-barrett-super-green-tea-diet-tablets-60013256?skuid=013256',
-      price: 9.49,
+      price: 4.74,
       rating: 2.9,
-      promo: promoProfiles.penny,
+      promo: promoProfiles.halfPrice,
       description: 'Suitable for vegetarians, Holland & Barrett Super Green Tea Diet Tablets blend of Caffeine, Guarana, chromium, Vitamin B6, Bladderwrack, Green Tea and Uva Ursi.',
       img: 'HB/724/013256_A.png',
       tag: 'vhms'
@@ -132,9 +132,9 @@
       sku: '029525',
       productId: '60029525',
       url: 'holland-barrett-glucomannan-500mg-60029525?skuid=029525',
-      price: 7.99,
-      rating: 3.9,
-      promo: 'None',
+      price: 3.99,
+      rating: 3.8,
+      promo: promoProfiles.halfPrice,
       description: 'Holland & Barrett Glucomannan (Konjac fibre) is a natural ingredient that in the context of a calorie controlled diet contributes to weight loss.',
       img: 'HB/724/029525_A.png',
       tag: 'vhms'
@@ -145,7 +145,7 @@
       url: 'nutritional-headquarters-fat-metaboliser-tablets-60010210?skuid=010212',
       price: 12.99,
       rating: 3.4,
-      promo: promoProfiles.penny,
+      promo: 'None',
       description: 'Fat Metaboliser tablets provide a combination of vitamins, minerals and botanical extracts, alongside a 14-day diet plan, to help you reach your weight management goals.',
       img: 'HB/724/010212_A.png',
       tag: 'vhms'
