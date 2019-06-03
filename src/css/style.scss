@@ -519,6 +519,13 @@ $mq-desktop: "only screen and (min-width: 1250px)";
 
     }
 
+    &__promo-banner br {
+        @media only screen and (max-width: 767px) {
+            display: none;
+        }
+            
+    }
+
     &__promo-banner--long {
 
         @media #{$mq-tablet} {
