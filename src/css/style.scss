@@ -24,7 +24,7 @@ $mq-desktop: "only screen and (min-width: 1250px)";
     margin-top: -10px;
 
     @media #{$mq-tablet} {
-        margin-top: -30px;
+        margin-top: -35px;
     }
 
 }
@@ -519,12 +519,12 @@ $mq-desktop: "only screen and (min-width: 1250px)";
 
     }
 
-    &__promo-banner br {
-        @media only screen and (max-width: 767px) {
-            display: none;
-        }
+    // &__promo-banner br {
+    //     @media only screen and (max-width: 767px) {
+    //         display: none;
+    //     }
             
-    }
+    // }
 
     &__promo-banner--long {
 
