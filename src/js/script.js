@@ -37,20 +37,25 @@
         name: '3 for 2',
         backgroundColor: '#c73536',
         size: ''
+      },
+      twoFor3mixandmatch: {
+        name: '2 for £3.00<br/> Mix & Match',
+        backgroundColor: '#c73536',
+        size: 'long'
       }
     };
-    var products = [{ 
+    var products = [{ // DONE
       name: 'Garbanzo Dry Roasted Chickpeas Thai Sweet Chilli 65g',
       sku: '098299',
       productId: '60098299',
       url: 'garbanzo-dry-roasted-chickpeas-thai-sweet-chilli-60098299?skuid=098299',
-      price: 0.64,
+      price: 1.29,
       rating: 4.5,
-      promo: promoProfiles.halfPrice,
+      promo: 'None',
       description: 'Garbanzo Dry Roasted Chickpeas Thai Sweet Chilli flavour are slow roasted, deliciously nutty and crunchy, and seasoned with a unique blend of sweet and spice. Garbanzo is a delicious low calorie snack that helps to keep you fuller for longer.',
       img: 'HB/724/098299_A.jpg',
       tag: 'food'
-    }, { 
+    }, { // DONE
       name: 'Holland & Barrett Pitted Prunes 400g',
       sku: '081285',
       productId: '60081285',
@@ -61,18 +66,18 @@
       description: 'Our Holland & Barrett Prime Pitted Prunes are soft, succulent and whole pitted. Add to your breakfast in the morning for a low fat addition, or enjoy as a tasty snack!',
       img: 'HB/724/081285_A.jpg',
       tag: 'food'
-    }, { 
+    }, { // DONE
       name: 'Holland & Barrett Almonds 100g',
       sku: '090987',
       productId: '60090987',
       url: 'holland-barrett-almonds-60090987?skuid=090987',
       price: 1.79,
       rating: 4.6,
-      promo: 'None',
+      promo: promoProfiles.twoFor3mixandmatch,
       description: 'Available in a range of pack sizes, these awesome almonds are great for lunchboxes, cooking or baking, or perfect as an addictively moreish (and nutritious) party snack!',
       img: 'HB/724/090987_A.jpg',
       tag: 'food'
-    }, { 
+    }, { // DONE
       name: 'Holland & Barrett Chia Seeds 275g',
       sku: '004458',
       productId: '60004458',
@@ -83,62 +88,64 @@
       description: 'Our Holland & Barrett Clever Chia Seeds are completely natural and are a must-have ingredient for the home baker! These tasty little seeds can be added to cereal, porridge, yoghurts, baking mixes and much, much more.',
       img: 'HB/724/004458_A.jpg',
       tag: 'food'
-    }, { 
+    }, { // DONE
       name: 'Boombod 7 Day Achiever 21 Sachets',
       sku: '017346',
       productId: '60017346',
       url: 'boombod-7-day-achiever-21-sachets-60017346?skuid=017346',
-      price: 14.99,
+      price: 29.99,
       rating: 4.1,
-      promo: promoProfiles.halfPrice,
+      promo: promoProfiles.penny,
       description: 'Boombod sachets contain a quality source of the natural fibre glucomannan that reduces appetite, helps cleanse & decreases bloating.',
       img: 'HB/724/017346_A.png',
       tag: 'vhms'
-    }, { 
+    }, { // DONE
       name: 'Holland & Barrett Raspberry Ketone Complex Capsules',
       sku: '021031',
       productId: '60021031',
       url: 'holland-barrett-raspberry-ketone-complex-capsules-60021031?skuid=021031',
-      price: 9.99,
+      price: 19.99,
       rating: 4.1,
-      promo: promoProfiles.halfPrice,
+      promo: promoProfiles.penny,
       description: 'Glucomannan has almost no calories, but is very high in fibre. It absorbs water in the stomach. When in contact with water, glucomannan expands and can absorb up to 50 times its weight.',
       img: 'HB/724/021031_A.png',
       tag: 'vhms'
-    }, { 
+    }, { // DONE
       name: 'Holland & Barrett Super Green Tea Diet 60 Tablets',
       sku: '013256',
       productId: '60013256',
       url: 'holland-barrett-super-green-tea-diet-tablets-60013256?skuid=013256',
-      price: 4.74,
+      price: 9.49,
       rating: 3.0,
-      promo: promoProfiles.halfPrice,
+      promo: promoProfiles.penny,
       description: 'Suitable for vegetarians, Holland & Barrett Super Green Tea Diet Tablets blend of Caffeine, Guarana, chromium, Vitamin B6, Bladderwrack, Green Tea and Uva Ursi.',
       img: 'HB/724/013256_A.png',
       tag: 'vhms'
-    }, { 
+    }, { // DONE
       name: 'Holland & Barrett Glucomannan 500mg 60 Capsules',
       sku: '029525',
       productId: '60029525',
       url: 'holland-barrett-glucomannan-500mg-60029525?skuid=029525',
-      price: 3.99,
+      price: 7.99,
       rating: 3.9,
-      promo: promoProfiles.halfPrice,
+      promo: promoProfiles.penny,
       description: 'Holland & Barrett Glucomannan (Konjac fibre) is a natural ingredient that in the context of a calorie controlled diet contributes to weight loss.',
       img: 'HB/724/029525_A.png',
       tag: 'vhms'
-    }, { 
-      name: 'Nutritional Headquarters Fat Metaboliser 120 Tablets',
-      sku: '010212',
-      productId: '60010210',
-      url: 'nutritional-headquarters-fat-metaboliser-tablets-60010210?skuid=010212',
-      price: 6.49,
-      rating: 3.5,
-      promo: promoProfiles.halfPrice,
-      description: 'Fat Metaboliser tablets provide a combination of vitamins, minerals and botanical extracts, alongside a 14-day diet plan, to help you reach your weight management goals.',
-      img: 'HB/724/010212_A.png',
-      tag: 'vhms'
-    }];
+    }
+    // , {
+    //   name: 'Nutritional Headquarters Fat Metaboliser 120 Tablets',
+    //   sku: '010212',
+    //   productId: '60010210',
+    //   url: 'nutritional-headquarters-fat-metaboliser-tablets-60010210?skuid=010212',
+    //   price: 12.99,
+    //   rating: 3.5,
+    //   promo: promoProfiles.penny,
+    //   description: 'Fat Metaboliser tablets provide a combination of vitamins, minerals and botanical extracts, alongside a 14-day diet plan, to help you reach your weight management goals.',
+    //   img: 'HB/724/010212_A.png',
+    //   tag: 'vhms'
+    // }
+  ];
   
     function initIntro() {
       var tipsHtml = '';

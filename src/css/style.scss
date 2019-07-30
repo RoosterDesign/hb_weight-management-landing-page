@@ -740,6 +740,13 @@ $mq-desktop: "only screen and (min-width: 1250px)";
 }
 
 
+@media only screen and (max-width: 767px) {
+    .wmc-product__promo-banner--long br {
+        display: none;
+    }        
+}
+
+
 
 // QUICK ADD BUTTONS
 
