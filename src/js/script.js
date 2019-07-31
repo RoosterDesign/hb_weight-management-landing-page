@@ -55,7 +55,18 @@
       description: 'Garbanzo Dry Roasted Chickpeas Thai Sweet Chilli flavour are slow roasted, deliciously nutty and crunchy, and seasoned with a unique blend of sweet and spice. Garbanzo is a delicious low calorie snack that helps to keep you fuller for longer.',
       img: 'HB/724/098299_A.jpg',
       tag: 'food'
-    }, { // DONE
+    }, {
+      name: "Holland & Barrett 100% Organic Jumbo Oats 1kg",
+      sku: "039796",
+      productId: "60039796",
+      url: "holland-barrett-100-organic-jumbo-oats-60039796?skuid=039796",
+      price: 3.69,
+      rating: 4.5,
+      promo: promoProfiles.bogohp,
+      description: "Nothing artificial. Just good, pure oats. Perfect for your favourite breakfast and baking recipes.",
+      img: "HB/724/039796_A.jpg",
+      tag: "food"
+  }, { // DONE
       name: 'Holland & Barrett Pitted Prunes 400g',
       sku: '081285',
       productId: '60081285',
