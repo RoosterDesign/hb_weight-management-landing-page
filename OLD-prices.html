@@ -888,6 +888,12 @@
     }
   }
   
+  @media only screen and (max-width: 767px) {
+    .wmc-product__promo-banner--long br {
+      display: none;
+    }
+  }
+  
   </style>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   </head>
@@ -932,6 +938,11 @@
               name: "3 for 2",
               backgroundColor: "#c73536",
               size: ""
+          },
+          twoFor3mixandmatch: {
+              name: "2 for £3.00<br/> Mix & Match",
+              backgroundColor: "#c73536",
+              size: "long"
           }
       };
       var products = [ {
@@ -946,13 +957,24 @@
           img: "HB/724/098299_A.jpg",
           tag: "food"
       }, {
+          name: "Holland & Barrett 100% Organic Jumbo Oats 1kg",
+          sku: "039796",
+          productId: "60039796",
+          url: "holland-barrett-100-organic-jumbo-oats-60039796?skuid=039796",
+          price: 2.69,
+          rating: 4.4,
+          promo: promoProfiles.bogohp,
+          description: "Nothing artificial. Just good, pure oats. Perfect for your favourite breakfast and baking recipes.",
+          img: "HB/724/039796_A.jpg",
+          tag: "food"
+      }, {
           name: "Holland & Barrett Pitted Prunes 400g",
           sku: "081285",
           productId: "60081285",
           url: "holland-barrett-pitted-prunes-60081285?skuid=081285",
           price: 3.99,
           rating: 4.4,
-          promo: "None",
+          promo: promoProfiles.bogohp,
           description: "Our Holland & Barrett Prime Pitted Prunes are soft, succulent and whole pitted. Add to your breakfast in the morning for a low fat addition, or enjoy as a tasty snack!",
           img: "HB/724/081285_A.jpg",
           tag: "food"
@@ -963,20 +985,9 @@
           url: "holland-barrett-almonds-60090987?skuid=090987",
           price: 1.79,
           rating: 4.6,
-          promo: "None",
+          promo: promoProfiles.bogohp,
           description: "Available in a range of pack sizes, these awesome almonds are great for lunchboxes, cooking or baking, or perfect as an addictively moreish (and nutritious) party snack!",
           img: "HB/724/090987_A.jpg",
-          tag: "food"
-      }, {
-          name: "Holland & Barrett Chia Seeds 275g",
-          sku: "004458",
-          productId: "60004458",
-          url: "holland-barrett-chia-seeds-60004458?skuid=004458",
-          price: 4.29,
-          rating: 4.7,
-          promo: "None",
-          description: "Our Holland & Barrett Clever Chia Seeds are completely natural and are a must-have ingredient for the home baker! These tasty little seeds can be added to cereal, porridge, yoghurts, baking mixes and much, much more.",
-          img: "HB/724/004458_A.jpg",
           tag: "food"
       }, {
           name: "Boombod 7 Day Achiever 21 Sachets",
@@ -1016,22 +1027,11 @@
           sku: "029525",
           productId: "60029525",
           url: "holland-barrett-glucomannan-500mg-60029525?skuid=029525",
-          price: 3.99,
-          rating: 3.9,
-          promo: promoProfiles.halfPrice,
+          price: 7.99,
+          rating: 4,
+          promo: promoProfiles.penny,
           description: "Holland & Barrett Glucomannan (Konjac fibre) is a natural ingredient that in the context of a calorie controlled diet contributes to weight loss.",
           img: "HB/724/029525_A.png",
-          tag: "vhms"
-      }, {
-          name: "Nutritional Headquarters Fat Metaboliser 120 Tablets",
-          sku: "010212",
-          productId: "60010210",
-          url: "nutritional-headquarters-fat-metaboliser-tablets-60010210?skuid=010212",
-          price: 6.49,
-          rating: 3.5,
-          promo: promoProfiles.halfPrice,
-          description: "Fat Metaboliser tablets provide a combination of vitamins, minerals and botanical extracts, alongside a 14-day diet plan, to help you reach your weight management goals.",
-          img: "HB/724/010212_A.png",
           tag: "vhms"
       } ];
       function initIntro() {
