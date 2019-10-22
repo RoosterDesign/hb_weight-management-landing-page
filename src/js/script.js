@@ -42,6 +42,11 @@
       name: '2 for £3.00<br/> Mix & Match',
       backgroundColor: '#c73536',
       size: 'long'
+    },
+    twoFor7: {
+      name: '2 for £7.00',
+      backgroundColor: '#c73536',
+      size: ''
     }
   };
   var products = [
@@ -51,22 +56,10 @@
       productId: '60098299',
       url: 'garbanzo-dry-roasted-chickpeas-thai-sweet-chilli-60098299?skuid=098299',
       price: 1.29,
-      rating: 4.5,
+      rating: 4.4,
       promo: 'None',
       description: 'Garbanzo Dry Roasted Chickpeas Thai Sweet Chilli flavour are slow roasted, deliciously nutty and crunchy, and seasoned with a unique blend of sweet and spice. Garbanzo is a delicious low calorie snack that helps to keep you fuller for longer.',
       img: 'HB/724/098299_A.jpg',
-      tag: 'food'
-    },
-    {
-      name: 'Holland & Barrett 100% Organic Jumbo Oats 1kg',
-      sku: '039796',
-      productId: '60039796',
-      url: 'holland-barrett-100-organic-jumbo-oats-60039796?skuid=039796',
-      price: 2.76,
-      rating: 4.5,
-      promo: promoProfiles.twentyFiveOff,
-      description: 'Nothing artificial. Just good, pure oats. Perfect for your favourite breakfast and baking recipes.',
-      img: 'HB/724/039796_A.jpg',
       tag: 'food'
     },
     {
@@ -98,9 +91,9 @@
       sku: '004458',
       productId: '60004458',
       url: 'holland-barrett-chia-seeds-60004458?skuid=004458',
-      price: 3.21,
+      price: 4.29,
       rating: 4.7,
-      promo: promoProfiles.twentyFiveOff,
+      promo: promoProfiles.twoFor7,
       description: 'Our Holland & Barrett Clever Chia Seeds are completely natural and are a must-have ingredient for the home baker! These tasty little seeds can be added to cereal, porridge, yoghurts, baking mixes and much, much more.',
       img: 'HB/724/004458_A.jpg',
       tag: 'food'
@@ -112,7 +105,7 @@
       url: 'boombod-7-day-achiever-21-sachets-60017346?skuid=017346',
       price: 29.99,
       rating: 4.1,
-      promo: 'None',
+      promo: promoProfiles.penny,
       description: 'Boombod sachets contain a quality source of the natural fibre glucomannan that reduces appetite, helps cleanse & decreases bloating.',
       img: 'HB/724/017346_A.png',
       tag: 'vhms'
@@ -122,9 +115,9 @@
       sku: '021031',
       productId: '60021031',
       url: 'holland-barrett-raspberry-ketone-complex-capsules-60021031?skuid=021031',
-      price: 9.99,
+      price: 19.99,
       rating: 4.0,
-      promo: promoProfiles.halfPrice,
+      promo: '',
       description: 'Glucomannan has almost no calories, but is very high in fibre. It absorbs water in the stomach. When in contact with water, glucomannan expands and can absorb up to 50 times its weight.',
       img: 'HB/724/021031_A.png',
       tag: 'vhms'
@@ -136,21 +129,9 @@
       url: 'holland-barrett-super-green-tea-diet-tablets-60013256?skuid=013256',
       price: 9.49,
       rating: 3.0,
-      promo: 'None',
+      promo: promoProfiles.penny,
       description: 'Suitable for vegetarians, Holland & Barrett Super Green Tea Diet Tablets blend of Caffeine, Guarana, chromium, Vitamin B6, Bladderwrack, Green Tea and Uva Ursi.',
       img: 'HB/724/013256_A.png',
-      tag: 'vhms'
-    },
-    {
-      name: 'Holland & Barrett Glucomannan 500mg 60 Capsules',
-      sku: '029525',
-      productId: '60029525',
-      url: 'holland-barrett-glucomannan-500mg-60029525?skuid=029525',
-      price: 3.99,
-      rating: 3.9,
-      promo: promoProfiles.halfPrice,
-      description: 'Holland & Barrett Glucomannan (Konjac fibre) is a natural ingredient that in the context of a calorie controlled diet contributes to weight loss.',
-      img: 'HB/724/029525_A.png',
       tag: 'vhms'
     }
   ];
@@ -185,20 +166,7 @@
     var bioName = 'Donia';
     var bioRole = 'Senior H&B Nutritionist';
     var bioQuote = 'Whether you’re looking to make healthier choices at meal times or to lose a few pounds for an upcoming event, I’ve pulled together some of my top tips to help kick start your weight loss.';
-    var bioHtml =
-      '<figure class="wmc-bio"><img src="' +
-      bioPhotoUrl +
-      '" class="wmc-bio__photo" alt="' +
-      bioName +
-      ', ' +
-      bioRole +
-      '" /><figcaption class="wmc-bio__quote-wrap"><p class="wmc-bio__quote">' +
-      bioQuote +
-      '</p><p class="wmc-bio__cite">- <strong>' +
-      bioName +
-      '</strong>, ' +
-      bioRole +
-      '</p></figcaption></figure>';
+    var bioHtml = '<figure class="wmc-bio"><img src="' + bioPhotoUrl + '" class="wmc-bio__photo" alt="' + bioName + ', ' + bioRole + '" /><figcaption class="wmc-bio__quote-wrap"><p class="wmc-bio__quote">' + bioQuote + '</p><p class="wmc-bio__cite">- <strong>' + bioName + '</strong>, ' + bioRole + '</p></figcaption></figure>';
 
     for (var _i = 0; _i < tips.length; _i++) {
       var tip = tips[_i];
@@ -214,14 +182,7 @@
     var productTitle = 'Top Product Picks';
     var foodTabCtrLabel = 'Healthy Food & Drink';
     var vhmsTabCtrLabel = 'Products to Support';
-    var productsHtml =
-      '<section class="wmc-section wmc-section--has-img wmc-section--products"><div class="wmc-section__inner"><h1 class="wmc-title wmc-title--white">' +
-      productTitle +
-      '</h1><ul class="product-list-tabs"><li class="product-list-tabs__control product-list-tabs__control--active js-product-tab" data-tab="food"><i class="fas fa-apple-alt product-list-tabs__control-icon"></i>' +
-      foodTabCtrLabel +
-      '</li><li class="product-list-tabs__control js-product-tab" data-tab="vhms"><i class="fas fa-pills product-list-tabs__control-icon"></i>' +
-      vhmsTabCtrLabel +
-      '</li></ul><div class="wmc-products-wrap"></div></div></section>';
+    var productsHtml = '<section class="wmc-section wmc-section--has-img wmc-section--products"><div class="wmc-section__inner"><h1 class="wmc-title wmc-title--white">' + productTitle + '</h1><ul class="product-list-tabs"><li class="product-list-tabs__control product-list-tabs__control--active js-product-tab" data-tab="food"><i class="fas fa-apple-alt product-list-tabs__control-icon"></i>' + foodTabCtrLabel + '</li><li class="product-list-tabs__control js-product-tab" data-tab="vhms"><i class="fas fa-pills product-list-tabs__control-icon"></i>' + vhmsTabCtrLabel + '</li></ul><div class="wmc-products-wrap"></div></div></section>';
     $('.wmc-section--intro').after(productsHtml);
   }
 
@@ -239,28 +200,7 @@
       var imgUrl = baseImgURL + product.img;
       var url = baseURL + product.url;
       var price = product.price.toFixed(2);
-      productHtml =
-        '<div class="wmc-product"><a href="' +
-        url +
-        '"><img src="' +
-        imgUrl +
-        '?i10c=img.resize(width:200,height:200)" class="wmc-product__img" width="200" height="200"></a><div class="wmc-product__side"><p class="wmc-product__title"><a href="' +
-        url +
-        '" class="wmc-product__title-link">' +
-        product.name +
-        '</a></p><div class="wmc-product__meta wmc-c">' +
-        starRating +
-        '<span class="wmc-product__price">&pound;' +
-        price +
-        '</span></div></div><div class="wmc-c"></div>' +
-        promo +
-        '<p class="wmc-product__desc">' +
-        product.description +
-        '</p><button class="wmc-product__cta quickAdd" data-sku="' +
-        product.sku +
-        '" data-product-id="' +
-        product.productId +
-        '">Quick Add</button></div>';
+      productHtml = '<div class="wmc-product"><a href="' + url + '"><img src="' + imgUrl + '?i10c=img.resize(width:200,height:200)" class="wmc-product__img" width="200" height="200"></a><div class="wmc-product__side"><p class="wmc-product__title"><a href="' + url + '" class="wmc-product__title-link">' + product.name + '</a></p><div class="wmc-product__meta wmc-c">' + starRating + '<span class="wmc-product__price">&pound;' + price + '</span></div></div><div class="wmc-c"></div>' + promo + '<p class="wmc-product__desc">' + product.description + '</p><button class="wmc-product__cta quickAdd" data-sku="' + product.sku + '" data-product-id="' + product.productId + '">Quick Add</button></div>';
       product.tag === 'food' ? foodProducts.append(productHtml) : vhmsProducts.append(productHtml);
     }
 
@@ -325,24 +265,10 @@
         url: '/the-health-hub/food-drink/diets/whats-the-best-diet-for-you/'
       }
     ];
-    var adviceHtml =
-      '<section class="wmc-section wmc-section--advice"><div class="wmc-section__inner"><h1 class="wmc-title">' + adviceTitle + '</h1><div class="wmc-advice"><div class="wmc-carousel-container" id="wmc-advice-carousel"><div class="wmc-advice-carousel"></div></div></div></div></section>';
+    var adviceHtml = '<section class="wmc-section wmc-section--advice"><div class="wmc-section__inner"><h1 class="wmc-title">' + adviceTitle + '</h1><div class="wmc-advice"><div class="wmc-carousel-container" id="wmc-advice-carousel"><div class="wmc-advice-carousel"></div></div></div></div></section>';
     articles.forEach(function(item) {
       var extraClass = item.title === 'Discover more' ? ' wmc-advice-carousel-item__thumbnail--hub-article' : '';
-      adviceCarouselHtml +=
-        '<div class="wmc-advice-carousel-item"><a href="' +
-        item.url +
-        '" class="wmc-advice-carousel-item__thumbnail' +
-        extraClass +
-        '" style="background-image:url(' +
-        item.image +
-        ')"></a><a href="' +
-        item.url +
-        '" class="wmc-advice-carousel-item__link">' +
-        item.title +
-        '</a><p class="wmc-advice-carousel-item__synopsis">' +
-        item.intro +
-        '</p></div>';
+      adviceCarouselHtml += '<div class="wmc-advice-carousel-item"><a href="' + item.url + '" class="wmc-advice-carousel-item__thumbnail' + extraClass + '" style="background-image:url(' + item.image + ')"></a><a href="' + item.url + '" class="wmc-advice-carousel-item__link">' + item.title + '</a><p class="wmc-advice-carousel-item__synopsis">' + item.intro + '</p></div>';
     });
     $('.wmc-section--products').after(adviceHtml);
     $('.wmc-advice-carousel').append(adviceCarouselHtml);
