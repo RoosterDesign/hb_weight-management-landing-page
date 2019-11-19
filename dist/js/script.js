@@ -47,6 +47,16 @@
             name: "2 for £7.00",
             backgroundColor: "#c73536",
             size: ""
+        },
+        greatSavings: {
+            name: "Great Savings",
+            backgroundColor: "#c73536",
+            size: ""
+        },
+        blackTicketSale: {
+            name: "Black Ticket Sale",
+            backgroundColor: "#000",
+            size: "long"
         }
     };
     var products = [ {
@@ -54,11 +64,22 @@
         sku: "098299",
         productId: "60098299",
         url: "garbanzo-dry-roasted-chickpeas-thai-sweet-chilli-60098299?skuid=098299",
-        price: 1.29,
+        price: .64,
         rating: 4.4,
-        promo: "None",
+        promo: promoProfiles.halfPrice,
         description: "Garbanzo Dry Roasted Chickpeas Thai Sweet Chilli flavour are slow roasted, deliciously nutty and crunchy, and seasoned with a unique blend of sweet and spice. Garbanzo is a delicious low calorie snack that helps to keep you fuller for longer.",
         img: "HB/724/098299_A.jpg",
+        tag: "food"
+    }, {
+        name: "Holland & Barrett Organic Gluten Free Jumbo Oats 1kg",
+        sku: "039796",
+        productId: "60039796",
+        url: "holland-barrett-organic-gluten-free-jumbo-oats-60039796?skuid=039796",
+        price: 2.69,
+        rating: 4.5,
+        promo: "None",
+        description: "Nothing artificial. Just good, pure oats. Perfect for your favourite breakfast and baking recipes.",
+        img: "HB/370/039796_A.jpg",
         tag: "food"
     }, {
         name: "Holland & Barrett Pitted Prunes 400g",
@@ -89,7 +110,7 @@
         url: "holland-barrett-chia-seeds-60004458?skuid=004458",
         price: 4.29,
         rating: 4.7,
-        promo: promoProfiles.twoFor7,
+        promo: promoProfiles.greatSavings,
         description: "Our Holland & Barrett Clever Chia Seeds are completely natural and are a must-have ingredient for the home baker! These tasty little seeds can be added to cereal, porridge, yoghurts, baking mixes and much, much more.",
         img: "HB/724/004458_A.jpg",
         tag: "food"
@@ -98,9 +119,9 @@
         sku: "017346",
         productId: "60017346",
         url: "boombod-7-day-achiever-21-sachets-60017346?skuid=017346",
-        price: 29.99,
+        price: 12.99,
         rating: 4.1,
-        promo: promoProfiles.penny,
+        promo: promoProfiles.blackTicketSale,
         description: "Boombod sachets contain a quality source of the natural fibre glucomannan that reduces appetite, helps cleanse & decreases bloating.",
         img: "HB/724/017346_A.png",
         tag: "vhms"
@@ -111,7 +132,7 @@
         url: "holland-barrett-raspberry-ketone-complex-capsules-60021031?skuid=021031",
         price: 19.99,
         rating: 4,
-        promo: "",
+        promo: "None",
         description: "Glucomannan has almost no calories, but is very high in fibre. It absorbs water in the stomach. When in contact with water, glucomannan expands and can absorb up to 50 times its weight.",
         img: "HB/724/021031_A.png",
         tag: "vhms"
@@ -120,11 +141,22 @@
         sku: "013256",
         productId: "60013256",
         url: "holland-barrett-super-green-tea-diet-tablets-60013256?skuid=013256",
-        price: 9.49,
+        price: 3.99,
         rating: 3,
-        promo: promoProfiles.penny,
+        promo: promoProfiles.blackTicketSale,
         description: "Suitable for vegetarians, Holland & Barrett Super Green Tea Diet Tablets blend of Caffeine, Guarana, chromium, Vitamin B6, Bladderwrack, Green Tea and Uva Ursi.",
         img: "HB/724/013256_A.png",
+        tag: "vhms"
+    }, {
+        name: "Holland & Barrett Glucomannan 500mg 60 Capsules",
+        sku: "029525",
+        productId: "60029525",
+        url: "holland-barrett-glucomannan-500mg-60029525?skuid=029525",
+        price: 3.99,
+        rating: 3.9,
+        promo: promoProfiles.halfPrice,
+        description: "Holland & Barrett Glucomannan (Konjac fibre) is a natural ingredient that in the context of a calorie controlled diet contributes to weight loss.",
+        img: "HB/370/029525_A.jpg",
         tag: "vhms"
     } ];
     function initIntro() {
